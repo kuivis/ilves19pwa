@@ -1,0 +1,5 @@
+{
+  "../src/assets/robots.txt": "../dist/robots.txt",
+  "../src/assets/favicon.ico": "../dist/favicon.ico",
+  "../src/assets/app-icon.png": "../dist/assets/app-icon.png"
+}
