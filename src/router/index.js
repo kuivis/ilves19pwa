@@ -16,14 +16,14 @@ const router = new VueRouter({
   scrollBehavior: () => ({ y: 0 }),
   routes: [
     { path: '/page/:id', component: ThemePagePage },
-    { path: '/category/learning-paths', component: ThemePageCategoryLearningPaths },
-    { path: '/category/learning-paths/:id/:page?', component: ThemePageSingleLearningPaths },
-    { path: '/category/:id/page/:page', component: ThemePageCategory },
-    { path: '/category/:categorySlug/:id', component: ThemePageSingle },
-    { path: '/category/:id', component: ThemePageCategory, params: { page: 1 } },
+    { path: '/kategoria/learning-paths', component: ThemePageCategoryLearningPaths },
+    { path: '/kategoria/learning-paths/:id/:page?', component: ThemePageSingleLearningPaths },
+    { path: '/kategoria/:id/page/:page', component: ThemePageCategory },
+    { path: '/kategoria/:categorySlug/:id', component: ThemePageSingle },
+    { path: '/kategoria/:id', component: ThemePageCategory, params: { page: 1 } },
     { path: '/offline-redirect', component: OfflineRedirect },
     { path: '/:id', component: ThemePageSingle },
-    { path: '/', name: 'Home', redirect: '/category/blog/' }
+    { path: '/', name: 'Home', redirect: '/kategoria/blogit' }
   ]
 })
 

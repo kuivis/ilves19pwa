@@ -1,14 +1,14 @@
 'use strict'
 
 const Config = {
-  appTitle: 'Full Stack Weekly',
-  appTitleShort: 'FSW',
-  appDescription: 'A free weekly newsletter for the modern full-stack developer.',
-  appThemeColor: '#287ab1',
+  appTitle: 'Ilves19 mobiilisaitti',
+  appTitleShort: 'Ilves19',
+  appDescription: 'Ilveksen mobiilinettisivusto.',
+  appThemeColor: '#00ff00',
   appBgColor: '#ffffff',
   appIcon: 'assets/app-icon.png',
-  wpDomain: 'https://api.fullstackweekly.com/',
-  client: 'https://www.fullstackweekly.com/',
+  wpDomain: 'https://www.ilves19.fi/',
+  client: 'https://www.ilves19.fi/',
   loadDbName: 'vwpLocal',
   analyticsPath: '//www.google-analytics.com/analytics.js'
 }
