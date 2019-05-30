@@ -84,7 +84,7 @@
     }
     .post-title a {
       font-size: $size-4;
-      color: $primary;
+      color: $white;
       padding: 0 0 10px 0;
       font-weight: bold;
     }

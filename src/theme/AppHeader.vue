@@ -1,13 +1,9 @@
 <template>
   <nav class="navbar">
     <div class="navbar-brand">
-      <router-link to="/category/blog/" class="navbar-item">
-        <img
-          src="https://api.fullstackweekly.com/wp-content/uploads/2017/03/logo-horizontal.png"
-          id="vwp-logo"
-          alt="Full Stack Weekly"
-          exact
-      /></router-link>
+      <router-link to="/page/mobiili" class="navbar-item">
+        <h1>ILVES19</h1>
+      </router-link>
 
       <div
         class="navbar-burger burger"
@@ -26,16 +22,12 @@
       <div v-bind:class="{ 'navbar-end': true, 'is-active': isMenuActive }">
         <div class="navbar-item">
           <span v-on:click="closeMenu">
-            <router-link class="is-tab nav-item" to="/category/blog/"
-              >Personal Blog</router-link
-            >
+            <router-link class="is-tab nav-item" to="/kategoria/blogit/">Ilves-blogit</router-link>
           </span>
         </div>
         <div class="navbar-item">
           <span v-on:click="closeMenu">
-            <router-link class="is-tab nav-item" to="/category/learning-paths/"
-              >Learning Paths</router-link
-            >
+            <router-link class="is-tab nav-item" to="/kategoria/uutiset/">Uutiset</router-link>
           </span>
         </div>
         <div class="navbar-item">
@@ -52,12 +44,12 @@
                 class="button"
                 target="_blank"
                 rel="noopener"
-                href="https://twitter.com/bstavroulakis"
+                href="https://instagram.com/ilves19"
               >
                 <span class="icon">
-                  <i class="icon-twitter"></i>
+                  <i class="icon-instagram"></i>
                 </span>
-                <span>Twitter</span>
+                <span>IG</span>
               </a>
             </p>
           </div>
@@ -91,7 +83,11 @@
     }
   };
 </script>
-<style>
+<style lang="scss">
+@import '../_variables';
+  .navbar {
+    background-color: $primary !important;
+  }
   #vwp-logo {
     max-width: 350px;
     max-height: 3rem;

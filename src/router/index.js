@@ -23,7 +23,7 @@ const router = new VueRouter({
     { path: '/kategoria/:id', component: ThemePageCategory, params: { page: 1 } },
     { path: '/offline-redirect', component: OfflineRedirect },
     { path: '/:id', component: ThemePageSingle },
-    { path: '/', name: 'Home', redirect: '/kategoria/blogit' }
+    { path: '/', name: 'Etusivu', redirect: '/page/mobiili' }
   ]
 })
 

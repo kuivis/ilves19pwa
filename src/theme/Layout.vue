@@ -7,7 +7,7 @@
       </div>
     </section>
     <app-footer></app-footer>
-    <ga-analytics ua="UA-31484897-2"></ga-analytics>
+    <ga-analytics ua="ß"></ga-analytics>
   </div>
 </template>
 
@@ -32,7 +32,11 @@ export default {
   @import '../assets/fontello/css/fontello.css';
 
   #app > .main-section{
-    background-color: $background;
+    background-color: $white;
+  }
+  .card {
+    background-color: $cardContentBackground;
+    color: $white;
   }
   #app > .main-section.section{
     min-height: 800px;
