@@ -46,6 +46,7 @@
     "serialize-javascript": "1.7.0",
     "vue": "2.6.10",
     "vue-clazy-load": "0.4.2",
+    "vue-material": "^1.0.0-beta-11",
     "vue-resource": "1.5.1",
     "vue-router": "3.0.6",
     "vue-server-renderer": "2.6.10",

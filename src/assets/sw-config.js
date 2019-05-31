@@ -13,8 +13,8 @@ var config = {
     '/offline-redirect/'
   ],
   'paths': {
-    'api': 'https://api.fullstackweekly.com/wp-json',
-    'remote': 'https://api.fullstackweekly.com/',
+    'api': 'https://ilves19.fi/wp-json',
+    'remote': 'https://ilves19.fi/',
     'client': 'http://localhost:3000/'
   },
   'cacheNames': {

@@ -1,4 +1,6 @@
 import Vue from 'vue'
+import VueMaterial from 'vue-material'
+import 'vue-material/dist/vue-material.min.css'
 import ThemePageCategory from '../theme/Category.vue'
 import ThemePageSingle from '../theme/Single.vue'
 import ThemePagePage from '../theme/Page.vue'
@@ -8,6 +10,7 @@ import OfflineRedirect from '../theme/OfflineRedirect.vue'
 import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
+Vue.use(VueMaterial)
 
 const router = new VueRouter({
   mode: 'history',
