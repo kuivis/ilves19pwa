@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <md-app md-mode="reveal">
+    <md-app md-waterfall md-mode="fixed">
       <md-app-toolbar class="md-primary">
         <md-button class="md-icon-button" @click="menuVisible = !menuVisible">
           <md-icon>menu</md-icon>
@@ -40,11 +40,13 @@
             <router-view></router-view>
           </div>
        </section>
+
       <md-bottom-bar md-sync-route>
         <md-bottom-bar-item to="/page/mobiili" exact md-label="Home" md-icon="home"></md-bottom-bar-item>
         <md-bottom-bar-item to="/kategoria/uutiset" md-label="Posts" md-icon="weekend"></md-bottom-bar-item>
         <md-bottom-bar-item to="/kategoria/blogit" md-label="Favorites" md-icon="favorite"></md-bottom-bar-item>
       </md-bottom-bar>
+
       </md-app-content>
 
     </md-app>
@@ -63,60 +65,27 @@ export default {
 </script>
 
 <style lang="scss">
-  @import '../_variables';
-  @import '~bulma';
-  @import '../assets/fontello/css/fontello.css';
 
-  #app > .main-section{
-    background-color: $white;
-  }
-  .card {
-    background-color: $cardContentBackground;
-    color: $white;
-  }
-  #app > .main-section.section{
-    min-height: 800px;
-  }
-  .vwp-loading{
-    text-align: center;
-  }
-  .fake-card{
-    min-height: 300px;
-  }
-  .fake-single-content {
-    min-height: 500px;
-  }
-  .is-fullwidth{
-    width: 100%;
-  }
-  .display-inline{
-    display: inline-block;
-  }
-  .control {
-    position: relative;
-    text-align: left;
-  }
-  .control.is-grouped>.control.is-expanded {
-    flex-grow: 1;
-    flex-shrink: 1;
-  }
-  .control.is-grouped>.control:not(:last-child) {
-    margin-bottom: 0;
-    margin-right: .75rem;
-  }
-  .control.is-grouped {
-    display: flex;
-    justify-content: flex-start;
-  }
-  .control.is-grouped>.control {
-    flex-basis: 0;
-    flex-shrink: 0;
-  }
-  .alignleft{
-    float: left;
-    padding-right: 10px;
-  }
-  .md-app-content {
-    padding: 0 !important;
-  }
+$footerHeight: 56px;
+
+.md-app {
+  height: 100vh;
+}
+
+.md-app-scroller .md-app-content {
+  padding: 0;
+}
+
+.main-section .content {
+  padding: 16px;
+  margin-bottom: $footerHeight;
+}
+
+.md-bottom-bar {
+  position: absolute;
+  top: 100vh;
+  margin-top: $footerHeight * (-1);
+
+}
+
 </style>
