@@ -2,7 +2,7 @@
   <div v-if="categories && categories.length > 0">
     <div v-for="category in categories" v-bind:key="category.id">
       <h2>
-        <router-link :to="'/category/' + category.slug + '/'">
+        <router-link :to="'/kategoria/' + category.slug + '/'">
           <span>{{ category.name }}</span>
         </router-link>
       </h2>
@@ -59,7 +59,7 @@
         <vwp-paging
           v-if="category.totalPages > 0"
           :totalPages="category.totalPages"
-          :path="'/category/' + category.slug"
+          :path="'/kategoria/' + category.slug"
         ></vwp-paging>
       </div>
       <div class="columns"><div class="column"></div></div>

@@ -11,8 +11,7 @@
             v-if="(item != '...')"
             v-bind:class="{ 'is-active': ((page == null && item === 1) || (item === page)) }"
             :to="path + '/page/' + item + '/'"
-            >{{ item }}</router-link
-          >
+            >{{ item }}</router-link>
           <div v-if="(item == '...')">{{ item }}</div>
         </div>
       </div>

@@ -5,8 +5,6 @@ import 'vue-material/dist/theme/default.css'
 import ThemePageCategory from '../theme/Category.vue'
 import ThemePageSingle from '../theme/Single.vue'
 import ThemePagePage from '../theme/Page.vue'
-import ThemePageCategoryLearningPaths from '../theme/Category-LearningPaths.vue'
-import ThemePageSingleLearningPaths from '../theme/Single-LearningPaths.vue'
 import OfflineRedirect from '../theme/OfflineRedirect.vue'
 import VueRouter from 'vue-router'
 
@@ -20,9 +18,11 @@ const router = new VueRouter({
   scrollBehavior: () => ({ y: 0 }),
   routes: [
     { path: '/page/:id', component: ThemePagePage },
-    { path: '/kategoria/learning-paths', component: ThemePageCategoryLearningPaths },
-    { path: '/kategoria/learning-paths/:id/:page?', component: ThemePageSingleLearningPaths },
+    { path: '/page/:toplevel/:slug', component: ThemePagePage },
+    { path: '/kategoria/uutiset/:id', component: ThemePageSingle },
+    { path: '/kategoria/blogit/:id', component: ThemePageSingle },
     { path: '/kategoria/:id/page/:page', component: ThemePageCategory },
+    { path: '/kategoria/:id/:page', component: ThemePageSingle },
     { path: '/kategoria/:categorySlug/:id', component: ThemePageSingle },
     { path: '/kategoria/:id', component: ThemePageCategory, params: { page: 1 } },
     { path: '/offline-redirect', component: OfflineRedirect },
@@ -32,3 +32,4 @@ const router = new VueRouter({
 })
 
 export default router
+

@@ -1,17 +1,7 @@
 <template>
   <div class="vwp-single">
     <div v-if="single && single.content">
-      <div v-show="!hideBack">
-        <router-link
-          :to="'/category/' + single.pure_taxonomies.categories[0].slug + '/'"
-          class="single-back button is-pulled-left"
-        >
-          <span class="icon">
-            <i class="icon-left-big"></i>
-          </span>
-          <span>{{ single.pure_taxonomies.categories[0].name }}</span>
-        </router-link>
-      </div>
+      
       <h1 v-html="single.title.rendered"></h1>
       <div class="single-content card">
         <div

@@ -39,10 +39,9 @@
     </div>
     <footer class="card-footer">
       <router-link
-        :to="'/category/' + categorySlug + '/' + post.slug"
+        :to="'/kategoria/' + categorySlug + '/' + post.slug"
         class="card-footer-item"
-        >Read More</router-link
-      >
+        >Read More</router-link>
     </footer>
   </div>
 </template>
@@ -56,7 +55,7 @@
       gotoPost: function(post) {
         if (this.categorySlug && post && post.slug) {
           this.$router.push({
-            path: "/category/" + this.categorySlug + "/" + post.slug
+            path: "/kategoria/" + this.categorySlug + "/" + post.slug
           });
         }
       },
@@ -84,7 +83,6 @@
     }
     .post-title a {
       font-size: $size-4;
-      color: $white;
       padding: 0 0 10px 0;
       font-weight: bold;
     }

@@ -5,31 +5,31 @@
         <md-button class="md-icon-button" @click="menuVisible = !menuVisible">
           <md-icon>menu</md-icon>
         </md-button>
-        <span class="md-title">My Title</span>
+        <span class="md-title">Ilves19</span>
       </md-app-toolbar>
 
       <md-app-drawer :md-active.sync="menuVisible">
-        <md-toolbar class="md-transparent" md-elevation="0">Navigation</md-toolbar>
+        <md-toolbar class="md-transparent" md-elevation="0">Asetukset</md-toolbar>
 
         <md-list>
           <md-list-item>
             <md-icon>move_to_inbox</md-icon>
-            <span class="md-list-item-text">Inbox</span>
+            <span class="md-list-item-text">Valikko1</span>
           </md-list-item>
 
           <md-list-item>
             <md-icon>send</md-icon>
-            <span class="md-list-item-text">Sent Mail</span>
+            <span class="md-list-item-text">Valikko2</span>
           </md-list-item>
 
           <md-list-item>
             <md-icon>delete</md-icon>
-            <span class="md-list-item-text">Trash</span>
+            <span class="md-list-item-text">Valikko3</span>
           </md-list-item>
 
           <md-list-item>
             <md-icon>error</md-icon>
-            <span class="md-list-item-text">Spam</span>
+            <span class="md-list-item-text">Valikko4</span>
           </md-list-item>
         </md-list>
       </md-app-drawer>
@@ -42,9 +42,10 @@
        </section>
 
       <md-bottom-bar md-sync-route>
-        <md-bottom-bar-item to="/page/mobiili" exact md-label="Home" md-icon="home"></md-bottom-bar-item>
-        <md-bottom-bar-item to="/kategoria/uutiset" md-label="Posts" md-icon="weekend"></md-bottom-bar-item>
-        <md-bottom-bar-item to="/kategoria/blogit" md-label="Favorites" md-icon="favorite"></md-bottom-bar-item>
+        <md-bottom-bar-item to="/page/mobiili" exact md-label="Etusivu" md-icon="home"></md-bottom-bar-item>
+        <md-bottom-bar-item to="/kategoria/uutiset" md-label="Uutiset" md-icon="weekend"></md-bottom-bar-item>
+        <md-bottom-bar-item to="/kategoria/blogit" md-label="Blogit" md-icon="favorite"></md-bottom-bar-item>
+        <md-bottom-bar-item to="/page/leirilippukuntakansio" md-label="Leirilippukuntakansio" md-icon="favorite"></md-bottom-bar-item>
       </md-bottom-bar>
 
       </md-app-content>
