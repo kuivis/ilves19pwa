@@ -10,6 +10,29 @@
 
       <md-app-drawer :md-active.sync="menuVisible">
         <md-toolbar class="md-transparent" md-elevation="0">Asetukset</md-toolbar>
+        <md-list>
+          <md-list-item>
+            <md-checkbox v-model="kaikki">Kaikki ikäkaudet</md-checkbox>
+          </md-list-item>
+          <md-list-item>
+            <md-checkbox v-model="aikuiset">Aikuiset</md-checkbox>
+          </md-list-item>
+          <md-list-item>
+            <md-checkbox v-model="vaeltajat">Vaeltajat</md-checkbox>
+          </md-list-item>
+          <md-list-item>
+            <md-checkbox v-model="samoajat">Samoajat</md-checkbox>
+          </md-list-item>
+          <md-list-item>
+            <md-checkbox v-model="tarpojat">Tarpojat</md-checkbox>
+          </md-list-item>
+          <md-list-item>
+            <md-checkbox v-model="seikkailijat">Seikkailijat</md-checkbox>
+          </md-list-item>
+          <md-list-item>
+            <md-checkbox v-model="sudenpennut">Sudenpennut</md-checkbox>
+          </md-list-item>
+        </md-list>
 
         <md-list>
           <md-list-item>
@@ -39,34 +62,40 @@
           <div class="container content">
             <router-view></router-view>
           </div>
-       </section>
+        </section>
 
-      <md-bottom-bar md-sync-route>
-        <md-bottom-bar-item to="/page/mobiili" exact md-label="Etusivu" md-icon="home"></md-bottom-bar-item>
-        <md-bottom-bar-item to="/kategoria/uutiset" md-label="Uutiset" md-icon="weekend"></md-bottom-bar-item>
-        <md-bottom-bar-item to="/kategoria/blogit" md-label="Blogit" md-icon="favorite"></md-bottom-bar-item>
-        <md-bottom-bar-item to="/page/leirilippukuntakansio" md-label="Leirilippukuntakansio" md-icon="favorite"></md-bottom-bar-item>
-      </md-bottom-bar>
-
+        <md-bottom-bar md-sync-route>
+          <md-bottom-bar-item to="/page/mobiili" exact md-label="Etusivu" md-icon="home"></md-bottom-bar-item>
+          <md-bottom-bar-item to="/kategoria/uutiset" md-label="Uutiset" md-icon="weekend"></md-bottom-bar-item>
+          <md-bottom-bar-item to="/tapahtumat/" md-label="Tapahtumat" md-icon="favorite"></md-bottom-bar-item>
+          <md-bottom-bar-item
+            to="/page/leirilippukuntakansio"
+            md-label="Leirilippukuntakansio"
+            md-icon="favorite"
+          ></md-bottom-bar-item>
+        </md-bottom-bar>
       </md-app-content>
-
     </md-app>
   </div>
 </template>
 
 <script>
-
-
 export default {
-  name: 'app',
+  name: "app",
   data: () => ({
-    menuVisible: false
+    menuVisible: false,
+    kaikki: true,
+    aikuiset: true,
+    vaeltajat: false,
+    samoajat: false,
+    tarpojat: false,
+    seikkailijat: false,
+    sudenpennut: false
   })
-}
+};
 </script>
 
 <style lang="scss">
-
 $footerHeight: 56px;
 
 .md-app {
@@ -86,7 +115,5 @@ $footerHeight: 56px;
   position: absolute;
   top: 100vh;
   margin-top: $footerHeight * (-1);
-
 }
-
 </style>

@@ -58,13 +58,30 @@ let wordpressService = {
         .catch(error => reject(error))
     })
   },
-  getPost (postId, postSlug) {
-    console.log("hae posti")
+  getEvents (page, perPage, order = 'desc') {
+    console.log("hae tapahtumat")
     return new Promise((resolve, reject) => {
-      let path = Config.wpDomain + `wp-json/wp/v2/posts/${postId}?fields=id,title,slug,tags,date,better_featured_image,content,rest_api_enabler,pure_taxonomies`
+      let path = Config.wpDomain + `wp-json/wp/v2/event?page=${page}&order=${order}&per_page=${perPage}&fields=id,title,slug,date,better_featured_image,excerpt`
+      console.log(path)
+      this.cacheRequest(path, 0)
+        .then(response => {
+          var totalPages = (response.headers.hasOwnProperty('X-WP-TotalPages')) ? response.headers['X-WP-TotalPages'][0] : 0
+          if (totalPages === 0) {
+            totalPages = (response.headers.hasOwnProperty('x-wp-totalpages')) ? response.headers['x-wp-totalpages'][0] : 0
+          }
+          var responseData = {posts: response.data, totalPages: totalPages}
+          resolve(responseData)
+        })
+        .catch(error => reject(error))
+    })
+  },
+  getEvent (postId, postSlug) {
+    console.log("hae tapahtuma")
+    return new Promise((resolve, reject) => {
+      let path = Config.wpDomain + `wp-json/wp/v2/event/${postId}?fields=id,title,slug,tags,date,better_featured_image,content,rest_api_enabler,pure_taxonomies`
       console.log(path)
       if (!postId && postSlug) {
-        path = Config.wpDomain + `wp-json/wp/v2/posts/?slug=${postSlug}&fields=id,title,slug,tags,date,better_featured_image,content,rest_api_enabler,pure_taxonomies`
+        path = Config.wpDomain + `wp-json/wp/v2/event/?slug=${postSlug}&fields=id,title,slug,tags,date,better_featured_image,content,rest_api_enabler,pure_taxonomies`
         console.log(path)
       }
       this.cacheRequest(path, 0)

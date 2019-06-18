@@ -1,0 +1,55 @@
+@import '../_variables';
+@import '~bulma';
+@import '../assets/fontello/css/fontello.css';
+
+#app > .main-section{
+    background-color: $white;
+  }
+  .card {
+    background-color: $cardContentBackground;
+  }
+  #app > .main-section.section{
+    min-height: 800px;
+  }
+  .vwp-loading{
+    text-align: center;
+  }
+  .fake-card{
+    min-height: 300px;
+  }
+  .fake-single-content {
+    min-height: 500px;
+  }
+  .is-fullwidth{
+    width: 100%;
+  }
+  .display-inline{
+    display: inline-block;
+  }
+  .control {
+    position: relative;
+    text-align: left;
+  }
+  .control.is-grouped>.control.is-expanded {
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+  .control.is-grouped>.control:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: .75rem;
+  }
+  .control.is-grouped {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .control.is-grouped>.control {
+    flex-basis: 0;
+    flex-shrink: 0;
+  }
+  .alignleft{
+    float: left;
+    padding-right: 10px;
+  }
+  .md-app-content {
+    padding: 0 !important;
+  }

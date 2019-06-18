@@ -3,7 +3,9 @@ import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.min.css'
 import 'vue-material/dist/theme/default.css'
 import ThemePageCategory from '../theme/Category.vue'
+import ThemeEventCategory from '../theme/Category-events.vue'
 import ThemePageSingle from '../theme/Single.vue'
+import ThemeEventSingle from '../theme/Single-events.vue'
 import ThemePagePage from '../theme/Page.vue'
 import OfflineRedirect from '../theme/OfflineRedirect.vue'
 import VueRouter from 'vue-router'
@@ -19,6 +21,8 @@ const router = new VueRouter({
   routes: [
     { path: '/page/:id', component: ThemePagePage },
     { path: '/page/:toplevel/:slug', component: ThemePagePage },
+    { path: '/tapahtumat/', component: ThemeEventCategory },
+    { path: '/tapahtumat/:id', component: ThemeEventSingle },
     { path: '/kategoria/uutiset/:id', component: ThemePageSingle },
     { path: '/kategoria/blogit/:id', component: ThemePageSingle },
     { path: '/kategoria/:id/page/:page', component: ThemePageCategory },
