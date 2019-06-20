@@ -13,7 +13,7 @@ var config = {
     '/offline-redirect/'
   ],
   'paths': {
-    'api': 'https://ilves19.fi/wp-json',
+    'api': 'https://ilves19.fi/sandbox/wp-json',
     'remote': 'https://ilves19.fi/',
     'client': 'http://localhost:3000/'
   },

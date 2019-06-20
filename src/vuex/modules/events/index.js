@@ -4,7 +4,7 @@ import * as mutations from './mutations'
 
 const defaultState = {
   events: [],
-  single: {}
+  event: {}
 }
 
 const inBrowser = typeof window !== 'undefined'

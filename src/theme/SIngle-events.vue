@@ -1,11 +1,11 @@
 <template>
   <div>
       <h1>Tapahtuman tiedot</h1>
-    <div v-if="(single && !single.content)">
+    <div v-if="(event && !event.content)">
       <h1>Loading...</h1>
       <div class="single-content card fake-single-content"></div>
     </div>
-    <vwp-single :single="single"></vwp-single>
+    <vwp-single :single="event"></vwp-single>
   </div>
 </template>
 
@@ -13,7 +13,7 @@
   import { mapGetters, mapActions } from "vuex";
   import VwpSingle from "components/vwpSingle.vue";
   const fetchInitialData = (store, route) => {
-    return store.dispatch(`category/getEvent`, route.params.id);
+    return store.dispatch(`events/getEvent`, route.params.id);
   };
   export default {
     name: "SingleComponent",
@@ -22,10 +22,10 @@
     },
     computed: {
       ...mapGetters(["routeParamId"]),
-      ...mapGetters("category", ["single"])
+      ...mapGetters("events", ["event"])
     },
     methods: {
-      ...mapActions("category", {
+      ...mapActions("events", {
         getEvent: "getEvent"
       }),
       loadData() {
