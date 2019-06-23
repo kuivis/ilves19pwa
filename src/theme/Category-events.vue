@@ -2,11 +2,12 @@
   <section>
       <h1>Tapahtumat</h1>
     <div class="clearfix"></div>
-    <div class="columns category-posts" v-if="!events || events.length === 0">
+    <div class="columns category-posts" v-if="!events.events || events.events.length === 0">
       Ei tapahtumia =(
-      <div class="column is-one-third"><div class="card fake-card"><div class="card-content">&nbsp;</div></div></div>
-      <div class="column is-one-third"><div class="card fake-card"><div class="card-content">&nbsp;</div></div></div>
-      <div class="column is-one-third"><div class="card fake-card"><div class="card-content">&nbsp;</div></div></div>
+        {{ events.totalPages }}
+      <div class="column is-one-third"><div class="card fake-card"><div class="card-content">testikortti 1</div></div></div>
+      <div class="column is-one-third"><div class="card fake-card"><div class="card-content">testikortti 2</div></div></div>
+      <div class="column is-one-third"><div class="card fake-card"><div class="card-content">testikortti 3</div></div></div>
     </div>
     <vwp-events :events="events" ></vwp-events>
   </section>
@@ -28,7 +29,7 @@ export default {
     'vwp-events': VwpEvents
   },
   computed: {
-    ...mapGetters('events',['event','events'])
+    ...mapGetters('events',['events'])
   },
   methods: {
     loadEvents () {

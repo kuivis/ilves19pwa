@@ -1,7 +1,7 @@
 const events = state => state.events
-const single = state => state.single
+const event = state => state.event
 
 export {
   events,
-  single
+  event
 }

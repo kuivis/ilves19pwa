@@ -1,5 +1,5 @@
 const EVENT_UPDATED = (state, event) => {
-  state.single = event
+  state.event = event
 }
 
 export {

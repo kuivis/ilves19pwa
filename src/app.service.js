@@ -66,9 +66,8 @@ let wordpressService = {
             totalPages = (response.headers.hasOwnProperty('x-wp-totalpages')) ? response.headers['x-wp-totalpages'][0] : 0
           }
           var responseData = {events: response.data, totalPages: totalPages}
-          console.log(responseData)
+          //console.log(responseData)
           resolve(responseData)
-
         })
         .catch(error => reject(error))
     })
