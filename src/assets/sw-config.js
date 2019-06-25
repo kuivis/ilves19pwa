@@ -10,6 +10,7 @@ var config = {
     '/assets/styles.css',
     '/assets/js/app.js',
     '/assets/js/vendor.js',
+    '/assets/Ilves19.kmz',
     '/offline-redirect/'
   ],
   'paths': {

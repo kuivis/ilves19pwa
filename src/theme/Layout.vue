@@ -68,6 +68,7 @@
           <md-bottom-bar-item to="/page/mobiili" exact md-label="Etusivu" md-icon="home"></md-bottom-bar-item>
           <md-bottom-bar-item to="/kategoria/uutiset" md-label="Uutiset" md-icon="weekend"></md-bottom-bar-item>
           <md-bottom-bar-item to="/tapahtumat/" md-label="Tapahtumat" md-icon="favorite"></md-bottom-bar-item>
+          <md-bottom-bar-item to="/kartta/" md-label="Kaertta" md-icon="favorite"></md-bottom-bar-item>
           <md-bottom-bar-item
             to="/page/leirilippukuntakansio"
             md-label="Leirilippukuntakansio"

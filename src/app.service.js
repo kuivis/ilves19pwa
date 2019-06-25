@@ -85,14 +85,15 @@ let wordpressService = {
     })
   },
   getEvent (postId, postSlug) {
-    console.log("app.service.js: getEvent")
+    console.log("+app.service.js: getEvent")
     return new Promise((resolve, reject) => {
       let path = Config.wpDomain + `wp-json/wp/v2/event/${postId}?fields=id,title,slug,tags,date,better_featured_image,content,rest_api_enabler,pure_taxonomies`
       if (!postId && postSlug) {
         path = Config.wpDomain + `wp-json/wp/v2/event/?slug=${postSlug}&fields=id,title,slug,tags,date,better_featured_image,content,rest_api_enabler,pure_taxonomies`
       }
+      console.log(path)
       this.cacheRequest(path, 0)
-        .then(response => resolve(response.data))
+        .then(response => resolve(response.data[0]))
         .catch(error => reject(error))
     })
   },

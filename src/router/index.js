@@ -8,6 +8,7 @@ import ThemePageSingle from '../theme/Single.vue'
 import ThemeEventSingle from '../theme/Single-events.vue'
 import ThemePagePage from '../theme/Page.vue'
 import OfflineRedirect from '../theme/OfflineRedirect.vue'
+import MapPage from '../theme/Map.vue'
 import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
@@ -23,7 +24,7 @@ const router = new VueRouter({
     { path: '/page/:toplevel/:slug', component: ThemePagePage },
     { path: '/tapahtumat/', component: ThemeEventCategory, params: { page: 1 } },
     { path: '/tapahtumat/page/:page', component: ThemeEventCategory },   
-    { path: '/tapahtumat/:id', component: ThemeEventSingle },
+    { path: '/tapahtumat/:slug', component: ThemeEventSingle },
     { path: '/kategoria/uutiset/:id', component: ThemePageSingle },
     { path: '/kategoria/blogit/:id', component: ThemePageSingle },
     { path: '/kategoria/:id/page/:page', component: ThemePageCategory },
@@ -31,6 +32,7 @@ const router = new VueRouter({
     { path: '/kategoria/:categorySlug/:id', component: ThemePageSingle },
     { path: '/kategoria/:id', component: ThemePageCategory, params: { page: 1 } },
     { path: '/offline-redirect', component: OfflineRedirect },
+    { path: '/kartta', component: MapPage },
     { path: '/:id', component: ThemePageSingle },
     { path: '/', name: 'Etusivu', redirect: '/page/mobiili' }
   ]

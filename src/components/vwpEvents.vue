@@ -1,7 +1,7 @@
 <template>
 <div>
   <div class="columns category-posts" v-if="!events.events || events.events.length === 0">
-    {{events}}
+    Ei tapahtumia =(
   </div>
     <div class="columns category-posts category-posts-loaded">
       <div class="column is-one-third" v-for="(event) in events.events" v-bind:key="event.id">

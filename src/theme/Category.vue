@@ -2,7 +2,7 @@
   <section>
     <div class="clearfix"></div>
     <div class="columns category-posts" v-if="!categories || categories.length === 0">
-      ei mitään kategorioita
+      Ei kategorioita
       <div class="column is-one-third"><div class="card fake-card"><div class="card-content">&nbsp;</div></div></div>
       <div class="column is-one-third"><div class="card fake-card"><div class="card-content">&nbsp;</div></div></div>
       <div class="column is-one-third"><div class="card fake-card"><div class="card-content">&nbsp;</div></div></div>

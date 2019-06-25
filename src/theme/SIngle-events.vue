@@ -13,10 +13,11 @@
   import { mapGetters, mapActions } from "vuex";
   import VwpSingle from "components/vwpSingle.vue";
   const fetchInitialData = (store, route) => {
-    return store.dispatch(`events/getEvent`, route.params.id);
+    console.log("single-events, params.slug: " + route.params.slug)
+    return store.dispatch(`events/getEvent`, route.params);
   };
   export default {
-    name: "SingleComponent",
+    name: "SingleEvent",
     components: {
       "vwp-single": VwpSingle
     },

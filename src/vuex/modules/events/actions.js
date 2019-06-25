@@ -3,7 +3,7 @@ import Vue from 'vue'
 import wordpressService from '../../../app.service'
 
 
-const getEvents = ({commit, state}, params) => {
+const getEvents = ({ commit, state }, params) => {
   return new Promise((resolve, reject) => {
     wordpressService.getEvents(params.page, 6).then((events) => {
       state.events = events
@@ -17,22 +17,24 @@ const getEvents = ({commit, state}, params) => {
 }
 
 const getEvent = ({ commit, state }, params) => {
-  console.log("actions, getEvent: " + params.id)
-  if (typeof window !== 'undefined' && state.event && state.event.slug !== params.id) {
+  console.log("actions, getEvent: " + params.slug)
+  if (typeof window !== 'undefined' && state.event && state.event.slug !== params.slug) {
     state.event = {}
   }
 
   return new Promise((resolve, reject) => {
-    let eventId = state.events.events[0].id
-    for (var i = 0; i < state.events.events.length; i++) {
-      if (state.events.events[i].slug === params.id) {
-        eventId = state.events.events[i].id
-        break
+    let eventSlug = params.slug
+    if (state.events.events && state.events.events.length > 0) {
+      for (var i = 0; i < state.events.events.length; i++) {
+        if (state.events.events[i].slug === params.slug) {
+          eventSlug = state.events.events[i].slug
+          break
+        }
       }
     }
-    wordpressService.getEvent(eventId).then((postData) => {
+    wordpressService.getEvent(null, eventSlug).then((postData) => {
       state.event = postData
-
+      console.log("Tuliko eventti: " + state.event.slug)
       resolve()
     }).catch(error => {
       reject(new Error(error))
