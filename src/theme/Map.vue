@@ -10,11 +10,19 @@ export default {
   name: "MapPage",
   async mounted() {
     try {
-      const google = await gmapsInit();;
+      const google = await gmapsInit();
       var evo = {lat: 61.205, lng: 25.122};
-      var map = new google.maps.Map(this.$el,{zoom:16, center: evo} );
+      var map = new google.maps.Map(this.$el,{
+        zoom:16, 
+        center: evo,
+        zoomControl: false,
+        mapTypeControl: false,
+        scaleControl: false,
+        streetViewControl: false,
+        fullscreenControl: false
+      } );
 
-      var kmzLayer = new google.maps.KmlLayer('/assets/ilves19.kmz');
+      var kmzLayer = new google.maps.KmlLayer('https://github.com/kuivis/ilves19pwa/blob/tapahtumat/src/assets/ilves19.kmz?raw=true');
       kmzLayer.setMap(map);
 
 
@@ -30,10 +38,9 @@ export default {
 
 #map {
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 104px);
+  margin: -16px;
+  overflow: hidden;
 }
-.main-section .content {
-    padding: 0;
-    margin-bottom: 0
-}
+
 </style>

@@ -35,6 +35,14 @@
         <span v-for="tag in post.tags" v-bind:key="tag.id">>#{{ tag }}</span>
         <br />
         <small>{{ post.date }}</small>
+        <br />
+        <small>Tapahtumapaikka: {{ post.cmb2.lippukuntateema_event_metabox.lippukuntateema_event_location }}</small>
+        <br />
+        <small>Alkamisaika: {{ post.cmb2.lippukuntateema_event_metabox.lippukuntateema_event_date_start }}</small>
+        <br />
+        <small>Päättymisaika: {{ post.cmb2.lippukuntateema_event_metabox.lippukuntateema_event_date_end}}</small>
+        <br />
+        <small>ikäkaudet: {{ post.ikakausi }}</small>
       </div>
     </div>
     <footer class="card-footer">

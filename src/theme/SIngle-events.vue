@@ -5,13 +5,13 @@
       <h1>Loading...</h1>
       <div class="single-content card fake-single-content"></div>
     </div>
-    <vwp-single :single="event"></vwp-single>
+    <vwp-single-event :single="event"></vwp-single-event>
   </div>
 </template>
 
 <script>
   import { mapGetters, mapActions } from "vuex";
-  import VwpSingle from "components/vwpSingle.vue";
+  import VwpSingleEvent from "components/vwpSingleEvent.vue";
   const fetchInitialData = (store, route) => {
     console.log("single-events, params.slug: " + route.params.slug)
     return store.dispatch(`events/getEvent`, route.params);
@@ -19,7 +19,7 @@
   export default {
     name: "SingleEvent",
     components: {
-      "vwp-single": VwpSingle
+      "vwp-single-event": VwpSingleEvent
     },
     computed: {
       ...mapGetters(["routeParamId"]),

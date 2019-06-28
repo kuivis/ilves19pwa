@@ -57,7 +57,7 @@ let wordpressService = {
   getEvents (page, perPage, order = 'desc') {
     console.log("app.service.js: getEvents")
     return new Promise((resolve, reject) => {
-      let path = Config.wpDomain + `wp-json/wp/v2/event?page=${page}&order=${order}&per_page=${perPage}&fields=id,title,slug,date,better_featured_image,excerpt`
+      let path = Config.wpDomain + `wp-json/wp/v2/event?page=${page}&order=${order}&per_page=${perPage}&fields=id,title,slug,date,better_featured_image,excerpt,cmb2`
       //console.log(path)
       this.cacheRequest(path, 0)
         .then(response => {
@@ -66,7 +66,7 @@ let wordpressService = {
             totalPages = (response.headers.hasOwnProperty('x-wp-totalpages')) ? response.headers['x-wp-totalpages'][0] : 0
           }
           var responseData = {events: response.data, totalPages: totalPages}
-          //console.log(responseData)
+          console.log(responseData)
           resolve(responseData)
         })
         .catch(error => reject(error))
@@ -82,19 +82,21 @@ let wordpressService = {
       this.cacheRequest(path, 0)
         .then(response => resolve(response.data))
         .catch(error => reject(error))
+        
     })
   },
   getEvent (postId, postSlug) {
     console.log("+app.service.js: getEvent")
     return new Promise((resolve, reject) => {
-      let path = Config.wpDomain + `wp-json/wp/v2/event/${postId}?fields=id,title,slug,tags,date,better_featured_image,content,rest_api_enabler,pure_taxonomies`
+      let path = Config.wpDomain + `wp-json/wp/v2/event/${postId}?fields=id,title,slug,tags,date,better_featured_image,content,rest_api_enabler,pure_taxonomies,cmb2`
       if (!postId && postSlug) {
-        path = Config.wpDomain + `wp-json/wp/v2/event/?slug=${postSlug}&fields=id,title,slug,tags,date,better_featured_image,content,rest_api_enabler,pure_taxonomies`
+        path = Config.wpDomain + `wp-json/wp/v2/event/?slug=${postSlug}&fields=id,title,slug,tags,date,better_featured_image,content,rest_api_enabler,pure_taxonomies,cmb2`
       }
       console.log(path)
       this.cacheRequest(path, 0)
         .then(response => resolve(response.data[0]))
         .catch(error => reject(error))
+        
     })
   },
   getPage (pageId, pageSlug) {
