@@ -1,49 +1,35 @@
 <template>
-  <div :class="{'vwp-post-card': true, 'card':true, 'new':isNew(post.date)}">
-    <div class="card-image">
-      <figure
-        class="image"
-        v-if="post.better_featured_image && post.better_featured_image.media_details 
-        && post.better_featured_image.media_details.sizes.medium"
-      >
-        <clazy-load
-          v-bind:src="cdnUrl(post.better_featured_image.media_details.sizes.medium.source_url)"
-        >
-          <img
-            v-bind:alt="post && post.better_featured_image && post.better_featured_image.media_details"
-            v-bind:src="cdnUrl(post.better_featured_image.media_details.sizes.medium.source_url)"
-            slot="image"
-          />
-          <div slot="placeholder">
-            ...
-          </div>
-        </clazy-load>
-      </figure>
-    </div>
-    <div class="card-content" v-if="post && post.title">
-      <div class="content">
-        <div v-if="isNew(post.date)" class="is-new">new</div>
-        <div class="post-title">
-          <div v-if="post.slug && categorySlug">
-            <a v-on:click="gotoPost(post)">
-              <span v-html="post.title.rendered"></span>
-            </a>
-          </div>
-        </div>
-        <p class="is-clearfix"></p>
-        <div v-html="post.excerpt.rendered"></div>
-        <span v-for="tag in post.tags" v-bind:key="tag.id">>#{{ tag }}</span>
-        <br />
-        <small>{{ post.date }}</small>
+<md-card>
+   <md-card-media>
+      <img src="http://www.ilves19.fi/sandbox/wp-content/uploads/ilves19_logo_web_black.png" alt="Ilves">
+    </md-card-media>
+
+<md-card-header>
+      <div class="md-title">
+        <a v-on:click="gotoPost(post)">
+          <span v-html="post.title.rendered"></span>
+        </a>
       </div>
-    </div>
-    <footer class="card-footer">
+      <div class="md-subhead">{{ post.date }}</div>
+    </md-card-header>
+
+  <md-card-actions>
+      <md-button>Action</md-button>
+      <md-button>Action</md-button>
+    </md-card-actions>
+   
+     <md-card-content>
+      <span v-html="post.excerpt.rendered">></span>
+      <br>
+      <small>{{ post.date }}</small>
+      <br>
+      <small>ikäkaudet: {{ post.ikakausi }}</small>
       <router-link
         :to="'/kategoria/' + categorySlug + '/' + post.slug"
         class="card-footer-item"
-        >Read More</router-link>
-    </footer>
-  </div>
+        >Lue lisää</router-link>
+    </md-card-content>
+  </md-card>
 </template>
 
 <script>

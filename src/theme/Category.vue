@@ -16,6 +16,7 @@ import { mapGetters } from 'vuex'
 import VwpSubcategory from 'components/vwpSubcategory.vue'
 const fetchInitialData = (store, route) => {
   route.params.page = route.params.page || 1
+  console.log("category, fetchInitialData, page:" + route.params.page)
   return store.dispatch(`category/getCategory`, {categorySlug: route.params.id, page: route.params.page})
 }
 export default {
@@ -35,6 +36,7 @@ export default {
   },
   watch: {
     '$route' (to, from) {
+      console.log("route change watched")
       this.loadPosts()
     }
   },

@@ -1,28 +1,23 @@
 <template>
-<div>
-  <div class="columns category-posts" v-if="!events.events || events.events.length === 0">
-    Ei tapahtumia =(
-  </div>
-    <div class="columns category-posts category-posts-loaded">
-      <div class="column is-one-third" v-for="(event) in events.events" v-bind:key="event.id">
+  <div>
+    <div class="md-layout md-gutter md-alignment-center">
+      <div
+        class="md-layout-item md-medium-size-33 md-small-size-50 md-xsmall-size-100"
+        v-for="(event) in events.events"
+        v-bind:key="event.id"
+      >
         <vwp-event-card :post="event" :newFlag="newFlag"></vwp-event-card>
       </div>
     </div>
+
     <div v-if="!hidePagination">
-      <div class="columns">
-        <div class="column"></div>
-      </div>
       <vwp-paging
         v-if="events.totalPages > 0"
         :totalPages="events.totalPages"
-        :path="'/tapahtumat/'"
+        :path="'/tapahtumat'"
       ></vwp-paging>
     </div>
-    <div class="columns">
-      <div class="column"></div>
-    </div>
   </div>
-
 </template>
 
 <script>

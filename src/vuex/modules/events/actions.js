@@ -34,7 +34,7 @@ const getEvent = ({ commit, state }, params) => {
     }
     wordpressService.getEvent(null, eventSlug).then((postData) => {
       state.event = postData
-      console.log("Tuliko eventti: " + state.event.cmb2)
+      console.log("Tuliko eventti: " + state.event.slug)
       resolve()
     }).catch(error => {
       reject(new Error(error))

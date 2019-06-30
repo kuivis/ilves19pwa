@@ -4,9 +4,6 @@
     <div class="clearfix"></div>
     <div class="columns category-posts" v-if="!events.events || events.events.length === 0">
       Ei tapahtumia =(
-      <div class="column is-one-third"><div class="card fake-card"><div class="card-content">testikortti 1</div></div></div>
-      <div class="column is-one-third"><div class="card fake-card"><div class="card-content">testikortti 2</div></div></div>
-      <div class="column is-one-third"><div class="card fake-card"><div class="card-content">testikortti 3</div></div></div>
     </div>
     <vwp-events :events="events" ></vwp-events>
   </section>
@@ -37,6 +34,7 @@ export default {
   },
   watch: {
     '$route' (to, from) {
+      console.log("route change watched")
       this.loadEvents()
     }
   },

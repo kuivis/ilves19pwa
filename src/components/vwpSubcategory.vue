@@ -10,40 +10,11 @@
         class="columns category-posts"
         v-if="!category.posts || category.posts.length === 0"
       >
-        <div class="column is-one-third">
-          <div class="card fake-card">
-            <div class="card-content">&nbsp;</div>
-          </div>
-        </div>
-        <div class="column is-one-third">
-          <div class="card fake-card">
-            <div class="card-content">&nbsp;</div>
-          </div>
-        </div>
-        <div class="column is-one-third">
-          <div class="card fake-card">
-            <div class="card-content">&nbsp;</div>
-          </div>
-        </div>
-        <div class="column is-one-third">
-          <div class="card fake-card">
-            <div class="card-content">&nbsp;</div>
-          </div>
-        </div>
-        <div class="column is-one-third">
-          <div class="card fake-card">
-            <div class="card-content">&nbsp;</div>
-          </div>
-        </div>
-        <div class="column is-one-third">
-          <div class="card fake-card">
-            <div class="card-content">&nbsp;</div>
-          </div>
-        </div>
       </div>
-      <div class="columns category-posts category-posts-loaded">
-        <div
-          class="column is-one-third"
+      <div class="md-layout md-gutter md-alignment-center">
+      
+      <div
+          class="md-layout-item md-medium-size-33 md-small-size-50 md-xsmall-size-100"
           v-for="(item) in category.posts"
           v-bind:key="item.id"
         >
@@ -54,15 +25,15 @@
           ></vwp-post-card>
         </div>
       </div>
+
       <div v-if="!hidePagination">
-        <div class="columns"><div class="column"></div></div>
         <vwp-paging
           v-if="category.totalPages > 0"
           :totalPages="category.totalPages"
           :path="'/kategoria/' + category.slug"
         ></vwp-paging>
       </div>
-      <div class="columns"><div class="column"></div></div>
+      
     </div>
   </div>
 </template>

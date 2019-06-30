@@ -116,5 +116,6 @@ $footerHeight: 56px;
   position: absolute;
   top: 100vh;
   margin-top: $footerHeight * (-1);
+  z-index: 100;
 }
 </style>

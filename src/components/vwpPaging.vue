@@ -30,7 +30,7 @@
       };
     },
     watch: {
-      $route(to, from) {
+      '$route' (to, from) {
         this.page = to.params.page;
         this.refreshPages(this.page);
       }
