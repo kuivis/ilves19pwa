@@ -64,15 +64,15 @@
           </div>
         </section>
 
-        <md-bottom-bar md-sync-route>
-          <md-bottom-bar-item to="/page/mobiili" exact md-label="Etusivu" md-icon="home"></md-bottom-bar-item>
+        <md-bottom-bar md-sync-router> <!-- Lisätyt ikonitiedostot eivät toimi... -->
+          <md-bottom-bar-item to="/page/mobiili" exact md-label="Etusivu" md-icon="/assets/baseline-local_post_office-24px.svg"></md-bottom-bar-item>
           <md-bottom-bar-item to="/kategoria/uutiset" md-label="Uutiset" md-icon="weekend"></md-bottom-bar-item>
-          <md-bottom-bar-item to="/tapahtumat/" md-label="Tapahtumat" md-icon="favorite"></md-bottom-bar-item>
-          <md-bottom-bar-item to="/kartta/" md-label="Kaertta" md-icon="favorite"></md-bottom-bar-item>
+          <md-bottom-bar-item to="/tapahtumat/" md-label="Tapahtumat" md-icon="/assets/baseline-event-24px.svg"></md-bottom-bar-item>
+          <md-bottom-bar-item to="/kartta/" md-label="Kartta" md-icon="/assets/baseline-map-24px"></md-bottom-bar-item>
           <md-bottom-bar-item
             to="/page/leirilippukuntakansio"
-            md-label="Leirilippukuntakansio"
-            md-icon="favorite"
+            md-label="LP-kansio"
+            md-icon="/assets/baseline-info-24px.svg"
           ></md-bottom-bar-item>
         </md-bottom-bar>
       </md-app-content>
