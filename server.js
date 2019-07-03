@@ -12,7 +12,7 @@ const serialize = require('serialize-javascript')
 const createBundleRenderer = require('vue-server-renderer').createBundleRenderer
 
 var allowCrossDomain = function (req, res, next) {
-  res.header('Access-Control-Allow-Origin', 'fullstackweekly-client.azureedge.net')
+  res.header('Access-Control-Allow-Origin', 'localhost')
   res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE')
   res.header('Access-Control-Allow-Headers', 'Content-Type')
 
@@ -68,8 +68,10 @@ app.use(allowCrossDomain)
 if (isProd) {
   app.use('/', express.static(resolve('./dist')))
   app.use(favicon(path.resolve(__dirname, './dist/favicon.ico')))
+  app.use('/assets', express.static(resolve('./dist/assets')))
 } else {
   app.use('/dist', express.static(resolve('./dist')))
+  app.use('/assets', express.static(resolve('./src/assets')))
   app.use('/service-worker.js', express.static(resolve('./src/service-worker.js')))
   app.use('/sw_config.js', express.static(resolve('./src/assets/sw-config.js')))
   app.use(favicon(path.resolve(__dirname, 'src/assets/favicon.ico')))
