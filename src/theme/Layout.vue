@@ -5,10 +5,10 @@
         <md-button class="md-icon-button" @click="menuVisible = !menuVisible">
           <md-icon>menu</md-icon>
         </md-button>
-        <span class="md-title">Ilves19</span>
+        <span class="md-title">ILVES19</span>
       </md-app-toolbar>
 
-      <md-app-drawer :md-active.sync="menuVisible">
+      <md-app-drawer :md-active.sync="menuVisible" >
         <md-toolbar class="md-transparent" md-elevation="0">Asetukset</md-toolbar>
         <md-list>
           <md-list-item>
@@ -64,14 +64,28 @@
           </div>
         </section>
 
-        <md-bottom-bar md-sync-router> <!-- Lisätyt ikonitiedostot eivät toimi... -->
-          <md-bottom-bar-item to="/page/mobiili" exact md-label="Etusivu" md-icon="/assets/baseline-local_post_office-24px.svg"></md-bottom-bar-item>
+        <md-bottom-bar md-type="shift" md-theme="default" md-sync-router>
+          
+          <md-bottom-bar-item
+            to="/page/mobiili"
+            exact
+            md-label="Etusivu"
+            md-icon="/assets/baseline-local_post_office-24px.svg"
+          ></md-bottom-bar-item>
           <md-bottom-bar-item to="/kategoria/uutiset" md-label="Uutiset" md-icon="weekend"></md-bottom-bar-item>
-          <md-bottom-bar-item to="/tapahtumat/" md-label="Tapahtumat" md-icon="/assets/baseline-event-24px.svg"></md-bottom-bar-item>
-          <md-bottom-bar-item to="/kartta/" md-label="Kartta" md-icon="/assets/baseline-map-24px.svg"></md-bottom-bar-item>
+          <md-bottom-bar-item
+            to="/tapahtumat/"
+            md-label="Tapahtumat"
+            md-icon="/assets/baseline-event-24px.svg"
+          ></md-bottom-bar-item>
+          <md-bottom-bar-item
+            to="/kartta/"
+            md-label="Kartta"
+            md-icon="/assets/baseline-map-24px.svg"
+          ></md-bottom-bar-item>
           <md-bottom-bar-item
             to="/page/leirilippukuntakansio"
-            md-label="LP-kansio"
+            md-label="Info"
             md-icon="/assets/baseline-info-24px.svg"
           ></md-bottom-bar-item>
         </md-bottom-bar>
@@ -92,13 +106,31 @@ export default {
     tarpojat: false,
     seikkailijat: false,
     sudenpennut: false
-  })
+  }),
+  mounted() {
+        if (localStorage.getItem('ikaluokat')) {
+          try {
+              this.ikaluokat = JSON.parse(localStorage.getItem('ikaluokat'));
+            } catch(e) {
+              localStorage.removeItem('ikaluokat');
+            }
+        }
+    }
 };
 </script>
 
 <style lang="scss">
 $footerHeight: 56px;
 
+.md-app-container .md-toolbar .md-title {
+  font-family: 'Rubik';
+  font-weight: 700;
+}
+
+.md-card .md-card-header .md-title {
+  font-family: 'Rubik';
+  font-weight: 700;
+}
 .md-app {
   height: 100vh;
 }

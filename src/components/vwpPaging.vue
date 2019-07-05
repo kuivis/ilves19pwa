@@ -92,7 +92,6 @@
     }
     .paging-wrapper {
       margin: 0 auto;
-      padding-left: 0.75rem;
       display: block;
       width: 100%;
       max-width: $weight-light * 1px;
@@ -102,6 +101,7 @@
     }
     .paging-wrapper-inner {
       display: flex;
+      justify-content: center;
     }
   }
 </style>

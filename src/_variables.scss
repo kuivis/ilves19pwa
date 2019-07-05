@@ -18,8 +18,14 @@ $text-invert: $white;
 @import "~vue-material/dist/theme/engine"; // Import the theme engine
 
 @include md-register-theme("default", (
-  primary: #003F2F, // The primary color of your brand
-  accent: #1a11e8 // The secondary color of your brand
+  primary: #003F2F,
+  accent: #feee00 
+));
+
+@include md-register-theme("green-card", (
+  primary: $cardContentBackground,
+  accent: #feee00,
+  theme: dark
 ));
 
 @import "~vue-material/dist/theme/all"; // Apply the theme

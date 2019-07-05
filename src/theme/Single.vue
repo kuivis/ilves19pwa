@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-if="(single && !single.content)">
-      <h1>Loading...</h1>
+      <h1>Ladataan...</h1>
       <div class="single-content card fake-single-content"></div>
     </div>
     <vwp-single :single="single"></vwp-single>

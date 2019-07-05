@@ -1,11 +1,9 @@
 <template>
   <div v-if="categories && categories.length > 0">
     <div v-for="category in categories" v-bind:key="category.id">
-      <h2>
-        <router-link :to="'/kategoria/' + category.slug + '/'">
-          <span>{{ category.name }}</span>
-        </router-link>
-      </h2>
+      <h1>
+        {{ category.name }}
+      </h1>
       <div
         class="columns category-posts"
         v-if="!category.posts || category.posts.length === 0"
@@ -50,3 +48,15 @@
     props: ["hidePagination", "newFlag", "categories"]
   };
 </script>
+
+<style lang="scss">
+@import "../_variables";
+
+section div > h1 {
+  font-family: "Rubik";
+  font-weight: 700;
+  color: $primary;
+  font-size: 26px;
+  text-transform: uppercase;
+}
+</style>

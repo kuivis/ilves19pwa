@@ -11,6 +11,7 @@ var config = {
     '/assets/js/app.js',
     '/assets/js/vendor.js',
     '/assets/Ilves19.kmz',
+    '/assets/ilves19_logo_web_black.png',
     '/offline-redirect/',
     '/assets/baseline-event-24px.svg',
     '/assets/baseline-feedback-24px.svg',

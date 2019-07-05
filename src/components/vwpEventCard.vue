@@ -1,37 +1,41 @@
 <template>
-  <md-card>
+  <md-card class="md-primary" md-theme="green-card">
     <md-card-media>
-      <img src="http://www.ilves19.fi/sandbox/wp-content/uploads/ilves19_logo_web_black.png" alt="Ilves">
+      <div class="image" v-if="post.better_featured_image">
+        <clazy-load v-bind:src="post.better_featured_image.source_url">
+          <img
+            v-on:click="gotoPost(post)"
+            v-bind:alt="post.better_featured_image.description"
+            v-bind:src="post.better_featured_image.source_url"
+            slot="image"
+          />
+          <div slot="placeholder">
+            <img src="/assets/ilves19_logo_web_black.png" alt="Ilves" />
+          </div>
+        </clazy-load>
+      </div>
     </md-card-media>
 
     <md-card-header>
       <div class="md-title">
-        <a v-on:click="gotoPost(post)">
-          <span v-html="post.title.rendered"></span>
-        </a>
+        <span v-on:click="gotoPost(post)" v-html="post.title.rendered"></span>
       </div>
-      <div class="md-subhead">{{ post.date }}</div>
+      <div class="md-subhead">
+        Tapahtumapaikka: {{ post.cmb2.lippukuntateema_event_metabox.lippukuntateema_event_location }}
+        <br />
+        Alkamisaika: {{ post.cmb2.lippukuntateema_event_metabox.lippukuntateema_event_date_start | formatDate }}
+        <br />
+        Päättymisaika: {{ post.cmb2.lippukuntateema_event_metabox.lippukuntateema_event_date_end | formatDate }}
+      </div>
     </md-card-header>
-
-    <md-card-actions>
-      <md-button>Action</md-button>
-      <md-button>Action</md-button>
-    </md-card-actions>
-
     <md-card-content>
       <span v-html="post.excerpt.rendered">></span>
-      <br>
-      <small>{{ post.date }}</small>
-      <br>
-      <small>Tapahtumapaikka: {{ post.cmb2.lippukuntateema_event_metabox.lippukuntateema_event_location }}</small>
-      <br>
-      <small>Alkamisaika: {{ post.cmb2.lippukuntateema_event_metabox.lippukuntateema_event_date_start }}</small>
-      <br>
-      <small>Päättymisaika: {{ post.cmb2.lippukuntateema_event_metabox.lippukuntateema_event_date_end}}</small>
-      <br>
-      <small>ikäkaudet: {{ post.ikakausi }}</small>
-      <router-link :to="'/tapahtumat/' + post.slug" class="card-footer-item">Lue lisää</router-link>
+      <small>Ikäkausi: {{ this.ikakausiLista(post.ikakausi)}}</small>
     </md-card-content>
+    <md-card-actions>
+      <md-button>Jaa linkki</md-button>
+      <md-button v-on:click="gotoPost(post)">Avaa</md-button>
+    </md-card-actions>
   </md-card>
 </template>
 
@@ -49,7 +53,7 @@ export default {
       }
     },
     cdnUrl: function(url) {
-      return url.replace("https://api.fullstackweekly.com/", Config.wpDomain);
+      return url.replace("https://www.ilves19.fi/", Config.wpDomain);
     },
     isNew: function(postDateStr) {
       let postDate = new Date(postDateStr);

@@ -3,6 +3,7 @@
   "../src/assets/favicon.ico": "../dist/favicon.ico",
   "../src/assets/app-icon.png": "../dist/assets/app-icon.png",
   "../src/assets/ilves19.kmz": "../dist/assets/ilves19.kmz",
+  "../src/assets/ilves19_logo_web_black.png": "../dist/assets/ilves19_logo_web_black.png",
   "../src/assets/baseline-event-24px.svg":"../dist/assets/baseline-event-24px.svg",
   "../src/assets/baseline-feedback-24px.svg":"../dist/assets/baseline-feedback-24px.svg",
   "../src/assets/baseline-map-24px.svg":"../dist/assets/baseline-map-24px.svg",
