@@ -8,52 +8,63 @@
         <span class="md-title">ILVES19</span>
       </md-app-toolbar>
 
-      <md-app-drawer :md-active.sync="menuVisible" >
-        
-        <md-toolbar class="md-transparent" md-elevation="0">Ilves19-sovellus</md-toolbar>
+      <md-app-drawer :md-active.sync="menuVisible">
+        <md-toolbar class="md-transparent" md-elevation="0">
+          <strong>Leiriapin asetukset</strong>
+        </md-toolbar>
+        <md-divider></md-divider>
         <md-list>
+          <md-subheader>Valitse ikäkaudet</md-subheader>
           <md-list-item>
-            <md-checkbox v-model="kaikki">Kaikki ikäkaudet</md-checkbox>
+            <md-checkbox v-model="ikakaudet.kaikki">Kaikki ikäkaudet</md-checkbox>
           </md-list-item>
           <md-list-item>
-            <md-checkbox v-model="aikuiset">Aikuiset</md-checkbox>
+            <md-checkbox v-model="ikakaudet.aikuiset">Aikuiset</md-checkbox>
           </md-list-item>
           <md-list-item>
-            <md-checkbox v-model="vaeltajat">Vaeltajat</md-checkbox>
+            <md-checkbox v-model="ikakaudet.vaeltajat">Vaeltajat</md-checkbox>
           </md-list-item>
           <md-list-item>
-            <md-checkbox v-model="samoajat">Samoajat</md-checkbox>
+            <md-checkbox v-model="ikakaudet.samoajat">Samoajat</md-checkbox>
           </md-list-item>
           <md-list-item>
-            <md-checkbox v-model="tarpojat">Tarpojat</md-checkbox>
+            <md-checkbox v-model="ikakaudet.tarpojat">Tarpojat</md-checkbox>
           </md-list-item>
           <md-list-item>
-            <md-checkbox v-model="seikkailijat">Seikkailijat</md-checkbox>
+            <md-checkbox v-model="ikakaudet.seikkailijat">Seikkailijat</md-checkbox>
           </md-list-item>
           <md-list-item>
-            <md-checkbox v-model="sudenpennut">Sudenpennut</md-checkbox>
+            <md-checkbox v-model="ikakaudet.sudenpennut">Sudenpennut</md-checkbox>
           </md-list-item>
         </md-list>
-
+        <md-divider></md-divider>
         <md-list>
+          <md-subheader>Valitse alaleiri</md-subheader>
           <md-list-item>
-            <md-icon>move_to_inbox</md-icon>
-            <span class="md-list-item-text">Valikko1</span>
+            <md-checkbox v-model="alaleirit.kaikki">Kaikki alaleirit</md-checkbox>
           </md-list-item>
-
           <md-list-item>
-            <md-icon>send</md-icon>
-            <span class="md-list-item-text">Valikko2</span>
+            <md-checkbox v-model="alaleirit.eksa">Eksa</md-checkbox>
           </md-list-item>
-
           <md-list-item>
-            <md-icon>delete</md-icon>
-            <span class="md-list-item-text">Valikko3</span>
+            <md-checkbox v-model="alaleirit.nano">Nano</md-checkbox>
           </md-list-item>
-
+          <md-list-item>
+            <md-checkbox v-model="alaleirit.jotta">Jotta</md-checkbox>
+          </md-list-item>
+          <md-list-item>
+            <md-checkbox v-model="alaleirit.tera">Tera</md-checkbox>
+          </md-list-item>
+          <md-list-item>
+            <md-checkbox v-model="alaleirit.tsetta">Tsetta</md-checkbox>
+          </md-list-item>
+        </md-list>
+        <md-divider></md-divider>
+        <md-list>
+          <md-subheader>Muuta</md-subheader>
           <md-list-item>
             <md-icon>error</md-icon>
-            <span class="md-list-item-text">Valikko4</span>
+            <span class="md-list-item-text">Tietoa leiriapista</span>
           </md-list-item>
         </md-list>
       </md-app-drawer>
@@ -66,7 +77,6 @@
         </section>
 
         <md-bottom-bar md-type="shift" md-theme="default" md-sync-router>
-          
           <md-bottom-bar-item
             to="/page/mobiili"
             exact
@@ -100,38 +110,56 @@ export default {
   name: "app",
   data: () => ({
     menuVisible: false,
-    kaikki: true,
-    aikuiset: true,
-    vaeltajat: false,
-    samoajat: false,
-    tarpojat: false,
-    seikkailijat: false,
-    sudenpennut: false
+    ikakaudet: {
+      kaikki: true,
+      aikuiset: true,
+      vaeltajat: false,
+      samoajat: false,
+      tarpojat: false,
+      seikkailijat: false,
+      sudenpennut: false
+    },
+    alaleirit: {
+      kaikki: true,
+      nano: false,
+      eksa: false,
+      tera: false,
+      jotta: false,
+      tsetta: false
+    }
   }),
   mounted() {
-        if (localStorage.getItem('ikaluokat')) {
-          try {
-              this.ikaluokat = JSON.parse(localStorage.getItem('ikaluokat'));
-            } catch(e) {
-              localStorage.removeItem('ikaluokat');
-            }
-        }
+    if (localStorage.getItem("ikaluokat")) {
+      try {
+        this.ikaluokat = JSON.parse(localStorage.getItem("ikaluokat"));
+      } catch (e) {
+        localStorage.removeItem("ikaluokat");
+      }
     }
+  }
 };
 </script>
 
 <style lang="scss">
-
 @import "../variables";
 
-
+div.md-content {
+  background-image: url("/assets/leiriappi_bg_harmaa.png");
+  background-repeat: repeat-y;
+  background-size: contain;
+}
 .md-app-container .md-toolbar .md-title {
-  font-family: 'Rubik';
+  font-family: "Rubik";
+  font-weight: 700;
+}
+
+.md-toolbar h1 {
+  font-family: "Rubik";
   font-weight: 700;
 }
 
 .md-card .md-card-header .md-title {
-  font-family: 'Rubik';
+  font-family: "Rubik";
   font-weight: 700;
 }
 .md-app {

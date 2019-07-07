@@ -1,13 +1,13 @@
 'use strict'
 
 const Config = {
-  appTitle: 'Ilves19 mobiilisaitti',
+  appTitle: 'Ilves19 leiriappi',
   appTitleShort: 'Ilves19',
   appDescription: 'Ilveksen mobiilinettisivusto.',
-  appThemeColor: '#00ff00',
+  appThemeColor: '#003F2F',
   appBgColor: '#ffffff',
   appIcon: 'assets/app-icon.png',
-  wpDomain: 'https://www.ilves19.fi/sandbox/',
+  wpDomain: 'https://rest.ilves19.fi/',
   client: 'https://app.ilves19.fi/',
   loadDbName: 'vwpLocal',
   analyticsPath: '//www.google-analytics.com/analytics.js'

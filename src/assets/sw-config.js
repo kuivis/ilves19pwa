@@ -18,11 +18,12 @@ var config = {
     '/assets/baseline-map-24px.svg',
     '/assets/baseline-info-24px.svg',
     '/assets/baseline-local_post_office-24px.svg',
-    '/assets/campground-solid.svg'
+    '/assets/campground-solid.svg',
+    '/assets/leiriappi_bg_harmaa.png'
   ],
   'paths': {
-    'api': 'https://ilves19.fi/sandbox/wp-json',
-    'remote': 'https://ilves19.fi/sandbox/',
+    'api': 'https://rest.ilves19.fi/wp-json',
+    'remote': 'https://rest.ilves19.fi/',
     'client': 'http://localhost:3000/'
   },
   'cacheNames': {
