@@ -17,7 +17,8 @@ var config = {
     '/assets/baseline-feedback-24px.svg',
     '/assets/baseline-map-24px.svg',
     '/assets/baseline-info-24px.svg',
-    '/assets/baseline-local_post_office-24px.svg'
+    '/assets/baseline-local_post_office-24px.svg',
+    '/assets/campground-solid.svg'
   ],
   'paths': {
     'api': 'https://ilves19.fi/sandbox/wp-json',

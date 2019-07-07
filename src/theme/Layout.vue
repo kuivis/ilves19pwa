@@ -9,7 +9,8 @@
       </md-app-toolbar>
 
       <md-app-drawer :md-active.sync="menuVisible" >
-        <md-toolbar class="md-transparent" md-elevation="0">Asetukset</md-toolbar>
+        
+        <md-toolbar class="md-transparent" md-elevation="0">Ilves19-sovellus</md-toolbar>
         <md-list>
           <md-list-item>
             <md-checkbox v-model="kaikki">Kaikki ikäkaudet</md-checkbox>
@@ -84,9 +85,9 @@
             md-icon="/assets/baseline-map-24px.svg"
           ></md-bottom-bar-item>
           <md-bottom-bar-item
-            to="/page/leirilippukuntakansio"
-            md-label="Info"
-            md-icon="/assets/baseline-info-24px.svg"
+            to="/page/leiri"
+            md-label="Leiri"
+            md-icon="/assets/campground-solid.svg"
           ></md-bottom-bar-item>
         </md-bottom-bar>
       </md-app-content>
@@ -120,7 +121,9 @@ export default {
 </script>
 
 <style lang="scss">
-$footerHeight: 56px;
+
+@import "../variables";
+
 
 .md-app-container .md-toolbar .md-title {
   font-family: 'Rubik';
