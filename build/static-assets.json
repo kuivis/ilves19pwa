@@ -9,5 +9,6 @@
   "../src/assets/baseline-map-24px.svg":"../dist/assets/baseline-map-24px.svg",
   "../src/assets/baseline-info-24px.svg":"../dist/assets/baseline-info-24px.svg",
   "../src/assets/baseline-local_post_office-24px.svg":"../dist/assets/baseline-local_post_office-24px.svg",
-  "../src/assets/leiriappi_bg_harmaa.png":"../dist/assets/assets/leiriappi_bg_harmaa.png"
+  "../src/assets/campground-solid.svg":"../dist/assets/campground-solid.svg",
+  "../src/assets/leiriappi_bg_harmaa.png":"../dist/assets/leiriappi_bg_harmaa.png"
 }
