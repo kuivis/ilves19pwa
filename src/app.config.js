@@ -7,8 +7,8 @@ const Config = {
   appThemeColor: '#003F2F',
   appBgColor: '#ffffff',
   appIcon: 'assets/app-icon.png',
-  wpDomain: 'https://rest.ilves19.fi/',
-  client: 'https://app.ilves19.fi/',
+  wpDomain: 'http://localhost/',
+  client: 'http://localhost:3000/',
   loadDbName: 'vwpLocal',
   analyticsPath: '//www.google-analytics.com/analytics.js'
 }

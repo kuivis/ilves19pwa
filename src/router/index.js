@@ -9,6 +9,7 @@ import ThemeEventSingle from '../theme/Single-events.vue'
 import ThemePagePage from '../theme/Page.vue'
 import OfflineRedirect from '../theme/OfflineRedirect.vue'
 import MapPage from '../theme/Map.vue'
+import InfoPage from '../theme/Info.vue'
 import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
@@ -33,6 +34,7 @@ const router = new VueRouter({
     { path: '/kategoria/:id', component: ThemePageCategory, params: { page: 1 } },
     { path: '/offline-redirect', component: OfflineRedirect },
     { path: '/kartta', component: MapPage },
+    { path: '/info', component: InfoPage },
     { path: '/:id', component: ThemePageSingle },
     { path: '/', name: 'Etusivu', redirect: '/page/mobiili' }
   ]

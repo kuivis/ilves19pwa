@@ -3,21 +3,22 @@
     <md-tabs>
       <md-tab id="tab-home" md-label="Yhteiset" exact>
         <h1>Yhteistapahtumat</h1>
-    <div class="clearfix"></div>
-    <div
-      class="columns category-posts"
-      v-if="!events.events || events.events.length === 0"
-    >Ladataan tapahtumia...</div>
+        <div class="clearfix"></div>
+        <div
+          class="columns category-posts"
+          v-if="!events.events || events.events.length === 0"
+        >Ladataan tapahtumia...</div>
         <vwp-events :events="events.events.filter(e => e.ikakausi.includes(235))"></vwp-events>
       </md-tab>
 
       <md-tab id="tab-pages" md-label="Oma ikäkausi">
         <h1>Oman ikäkauden tapahtumat</h1>
-    <div class="clearfix"></div>
-    <div
-      class="columns category-posts"
-      v-if="!events.events || events.events.length === 0"
-    >Ladataan tapahtumia...</div>
+        You have checked: {{ this.$store.state.valitutIkakaudet }}
+        <div class="clearfix"></div>
+        <div
+          class="columns category-posts"
+          v-if="!events.events || events.events.length === 0"
+        >Ladataan tapahtumia...</div>
         <vwp-events :events="events.events.filter(e => e.ikakausi.includes(234))"></vwp-events>
       </md-tab>
     </md-tabs>

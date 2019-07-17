@@ -13,60 +13,67 @@
           <strong>Leiriapin asetukset</strong>
         </md-toolbar>
         <md-divider></md-divider>
-        <md-list>
-          <md-subheader>Valitse ikäkaudet</md-subheader>
-          <md-list-item>
-            <md-checkbox v-model="ikakaudet.kaikki">Kaikki ikäkaudet</md-checkbox>
+
+        <md-list :md-expand-single="true">
+          <md-list-item md-expand>
+            <span class="md-list-item-text">Valitse ikäkaudet</span>
+            <md-list slot="md-expand">
+              <md-list-item>
+                <md-checkbox v-model="valitutIkakaudet" value="kaikki">Kaikki ikäkaudet</md-checkbox>
+              </md-list-item>
+              <md-list-item>
+                <md-checkbox v-model="valitutIkakaudet" value="aikuiset">Aikuiset</md-checkbox>
+              </md-list-item>
+              <md-list-item>
+                <md-checkbox v-model="valitutIkakaudet" value="vaeltajat">Vaeltajat</md-checkbox>
+              </md-list-item>
+              <md-list-item>
+                <md-checkbox v-model="valitutIkakaudet" value="samoajat">Samoajat</md-checkbox>
+              </md-list-item>
+              <md-list-item>
+                <md-checkbox v-model="valitutIkakaudet" value="tarpojat">Tarpojat</md-checkbox>
+              </md-list-item>
+              <md-list-item>
+                <md-checkbox v-model="valitutIkakaudet" value="seikkailijat">Seikkailijat</md-checkbox>
+              </md-list-item>
+              <md-list-item>
+                <md-checkbox v-model="valitutIkakaudet" value="sudenpennut">Sudenpennut</md-checkbox>
+              </md-list-item>
+            </md-list>
           </md-list-item>
-          <md-list-item>
-            <md-checkbox v-model="ikakaudet.aikuiset">Aikuiset</md-checkbox>
+          <md-divider></md-divider>
+          <md-list-item md-expand>
+            <span class="md-list-item-text">Valitse alaleiri</span>
+            <md-list slot="md-expand">
+              <md-list-item>
+                <md-checkbox v-model="alaleirit">Kaikki alaleirit</md-checkbox>
+              </md-list-item>
+              <md-list-item>
+                <md-checkbox v-model="alaleirit.eksa">Eksa</md-checkbox>
+              </md-list-item>
+              <md-list-item>
+                <md-checkbox v-model="alaleirit.nano">Nano</md-checkbox>
+              </md-list-item>
+              <md-list-item>
+                <md-checkbox v-model="alaleirit.jotta">Jotta</md-checkbox>
+              </md-list-item>
+              <md-list-item>
+                <md-checkbox v-model="alaleirit.tera">Tera</md-checkbox>
+              </md-list-item>
+              <md-list-item>
+                <md-checkbox v-model="alaleirit.tsetta">Tsetta</md-checkbox>
+              </md-list-item>
+            </md-list>
           </md-list-item>
+          <md-divider></md-divider>
           <md-list-item>
-            <md-checkbox v-model="ikakaudet.vaeltajat">Vaeltajat</md-checkbox>
-          </md-list-item>
-          <md-list-item>
-            <md-checkbox v-model="ikakaudet.samoajat">Samoajat</md-checkbox>
-          </md-list-item>
-          <md-list-item>
-            <md-checkbox v-model="ikakaudet.tarpojat">Tarpojat</md-checkbox>
-          </md-list-item>
-          <md-list-item>
-            <md-checkbox v-model="ikakaudet.seikkailijat">Seikkailijat</md-checkbox>
-          </md-list-item>
-          <md-list-item>
-            <md-checkbox v-model="ikakaudet.sudenpennut">Sudenpennut</md-checkbox>
+            <md-list-item>
+              <md-icon>error</md-icon>
+              <span class="md-list-item-text">Tietoa leiriapista</span>
+            </md-list-item>
           </md-list-item>
         </md-list>
-        <md-divider></md-divider>
-        <md-list>
-          <md-subheader>Valitse alaleiri</md-subheader>
-          <md-list-item>
-            <md-checkbox v-model="alaleirit.kaikki">Kaikki alaleirit</md-checkbox>
-          </md-list-item>
-          <md-list-item>
-            <md-checkbox v-model="alaleirit.eksa">Eksa</md-checkbox>
-          </md-list-item>
-          <md-list-item>
-            <md-checkbox v-model="alaleirit.nano">Nano</md-checkbox>
-          </md-list-item>
-          <md-list-item>
-            <md-checkbox v-model="alaleirit.jotta">Jotta</md-checkbox>
-          </md-list-item>
-          <md-list-item>
-            <md-checkbox v-model="alaleirit.tera">Tera</md-checkbox>
-          </md-list-item>
-          <md-list-item>
-            <md-checkbox v-model="alaleirit.tsetta">Tsetta</md-checkbox>
-          </md-list-item>
-        </md-list>
-        <md-divider></md-divider>
-        <md-list>
-          <md-subheader>Muuta</md-subheader>
-          <md-list-item>
-            <md-icon>error</md-icon>
-            <span class="md-list-item-text">Tietoa leiriapista</span>
-          </md-list-item>
-        </md-list>
+        You have checked: {{valitutIkakaudet}}
       </md-app-drawer>
 
       <md-app-content>
@@ -94,11 +101,7 @@
             md-label="Kartta"
             md-icon="/assets/baseline-map-24px.svg"
           ></md-bottom-bar-item>
-          <md-bottom-bar-item
-            to="/page/leiri"
-            md-label="Leiri"
-            md-icon="/assets/campground-solid.svg"
-          ></md-bottom-bar-item>
+          <md-bottom-bar-item to="/info" md-label="Leiri" md-icon="/assets/campground-solid.svg"></md-bottom-bar-item>
         </md-bottom-bar>
       </md-app-content>
     </md-app>
@@ -110,15 +113,6 @@ export default {
   name: "app",
   data: () => ({
     menuVisible: false,
-    ikakaudet: {
-      kaikki: true,
-      aikuiset: true,
-      vaeltajat: false,
-      samoajat: false,
-      tarpojat: false,
-      seikkailijat: false,
-      sudenpennut: false
-    },
     alaleirit: {
       kaikki: true,
       nano: false,
@@ -128,12 +122,13 @@ export default {
       tsetta: false
     }
   }),
-  mounted() {
-    if (localStorage.getItem("ikaluokat")) {
-      try {
-        this.ikaluokat = JSON.parse(localStorage.getItem("ikaluokat"));
-      } catch (e) {
-        localStorage.removeItem("ikaluokat");
+  computed: {
+    valitutIkakaudet: {
+      set(val) {
+        this.$store.state.valitutIkakaudet = val;
+      },
+      get() {
+        return this.$store.state.valitutIkakaudet;
       }
     }
   }
