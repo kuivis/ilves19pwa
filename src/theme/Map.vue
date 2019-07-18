@@ -22,7 +22,7 @@ export default {
         fullscreenControl: false
       } );
 
-      var kmzLayer = new google.maps.KmlLayer('https://app.ilves19.fi/assets/ilves19_karttalinkki.kmz');
+      var kmzLayer = new google.maps.KmlLayer('https://rest.ilves19.fi/media/ilves19_karttalinkki.kmz');
       kmzLayer.setMap(map);
 
 
