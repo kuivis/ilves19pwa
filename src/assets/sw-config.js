@@ -10,7 +10,7 @@ var config = {
     '/assets/styles.css',
     '/assets/js/app.js',
     '/assets/js/vendor.js',
-    '/assets/ilves19_kartta5.kmz',
+    '/assets/ilves19_karttalinkki.kmz',
     '/assets/ilves19_logo_web_black.png',
     '/offline-redirect/',
     '/assets/baseline-event-24px.svg',
