@@ -3,7 +3,7 @@ import Vuex from 'vuex'
 import categoryModule from './modules/category/index'
 import pageModule from './modules/page/index'
 import eventsModule from './modules/events/index'
-import ikakausiModule from './modules/valitutIkakaudet/index'
+import settingsModule from './modules/settings/index'
 
 Vue.use(Vuex)
 
@@ -13,6 +13,6 @@ export default new Vuex.Store({
     category: categoryModule,
     page: pageModule,
     events: eventsModule,
-    valitutIkakaudet: ikakausiModule
+    settings: settingsModule
   }
 })

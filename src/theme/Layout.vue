@@ -19,25 +19,15 @@
             <span class="md-list-item-text">Valitse ikäkaudet</span>
             <md-list slot="md-expand">
               <md-list-item>
-                <md-checkbox v-model="valitutIkakaudet" value="kaikki">Kaikki ikäkaudet</md-checkbox>
+                <md-checkbox class="md-primary" v-model="checkAllIkakaudet">Kaikki</md-checkbox>
               </md-list-item>
-              <md-list-item>
-                <md-checkbox v-model="valitutIkakaudet" value="aikuiset">Aikuiset</md-checkbox>
-              </md-list-item>
-              <md-list-item>
-                <md-checkbox v-model="valitutIkakaudet" value="vaeltajat">Vaeltajat</md-checkbox>
-              </md-list-item>
-              <md-list-item>
-                <md-checkbox v-model="valitutIkakaudet" value="samoajat">Samoajat</md-checkbox>
-              </md-list-item>
-              <md-list-item>
-                <md-checkbox v-model="valitutIkakaudet" value="tarpojat">Tarpojat</md-checkbox>
-              </md-list-item>
-              <md-list-item>
-                <md-checkbox v-model="valitutIkakaudet" value="seikkailijat">Seikkailijat</md-checkbox>
-              </md-list-item>
-              <md-list-item>
-                <md-checkbox v-model="valitutIkakaudet" value="sudenpennut">Sudenpennut</md-checkbox>
+              <md-list-item
+                v-for="item in ikakaudet"
+                :key="item.id"
+                :label="item.label"
+                :checked="item.checked"
+              >
+                <md-checkbox class="md-primary"  value="item.checked">{{ item.label }}</md-checkbox>
               </md-list-item>
             </md-list>
           </md-list-item>
@@ -112,25 +102,13 @@
 export default {
   name: "app",
   data: () => ({
-    menuVisible: false,
-    alaleirit: {
-      kaikki: true,
-      nano: false,
-      eksa: false,
-      tera: false,
-      jotta: false,
-      tsetta: false
-    }
+    menuVisible: false
   }),
   computed: {
-    valitutIkakaudet: {
-      set(val) {
-        this.$store.state.valitutIkakaudet = val;
-      },
-      get() {
-        return this.$store.state.valitutIkakaudet;
-      }
-    }
+    ...mapState(["ikakaudet", "alaleirit"])
+  },
+  methods: {
+    ...mapActions(["updateIkakaudet", "updateAlaleirit"])
   }
 };
 </script>
