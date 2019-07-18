@@ -22,7 +22,7 @@ export default {
         fullscreenControl: false
       } );
 
-      var kmzLayer = new google.maps.KmlLayer('https://github.com/kuivis/ilves19pwa/blob/master/src/assets/ilves19_kartta4.kmz?raw=true');
+      var kmzLayer = new google.maps.KmlLayer('https://github.com/kuivis/ilves19pwa/blob/master/src/assets/ilves19_kartta5.kmz?raw=true');
       kmzLayer.setMap(map);
 
 
