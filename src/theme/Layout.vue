@@ -18,23 +18,8 @@
           <md-list-item md-expand>
             <span class="md-list-item-text">Valitse ikäkaudet</span>
             <md-list slot="md-expand">
-              <md-list-item>
-                <md-checkbox
-                  class="md-primary"
-                  v-model="ikakaudet[0].checked"
-                >{{ikakaudet[0].label}}</md-checkbox>
-              </md-list-item>
-              <md-list-item>
-                <md-checkbox
-                  class="md-primary"
-                  v-model="ikakaudet[1].checked"
-                >{{ikakaudet[1].label}}</md-checkbox>
-              </md-list-item>
-              <md-list-item>
-                <md-checkbox
-                  class="md-primary"
-                  v-model="ikakaudet[2].checked"
-                >{{ikakaudet[2].label}}</md-checkbox>
+              <md-list-item v-for="ikakausi in ikakaudet" v-bind:key="ikakausi.id">
+                <md-checkbox class="md-primary" v-model="ikakausi.checked">{{ ikakausi.label }}</md-checkbox>
               </md-list-item>
             </md-list>
           </md-list-item>
@@ -89,11 +74,10 @@ export default {
     menuVisible: false
   }),
   computed: {
-
-    ...mapState("settings",["ikakaudet", "alaleirit"])
+    ...mapState("settings", ["ikakaudet", "alaleirit"])
   },
   methods: {
-    ...mapActions("settings",["updateIkakaudet", "updateAlaleirit"])
+    ...mapActions("settings", ["updateIkakaudet", "updateAlaleirit"])
   }
 };
 </script>

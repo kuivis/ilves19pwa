@@ -28,7 +28,10 @@ Vue.mixin({
         { id: 235, nimi: "Kaikki ikäkaudet" },
         { id: 234, nimi: "Samoajat" },
         { id: 236, nimi: "Tarpojat" },
-        { id: 233, nimi: "Vaeltajat" }
+        { id: 233, nimi: "Vaeltajat" },
+        { id: 237, nimi: "Aikuiset" },
+        { id: 238, nimi: "Seikkailijat" },
+        { id: 239, nimi: "Sudenpennut" }
       ]
     }
   },
@@ -48,11 +51,30 @@ Vue.mixin({
         resultString = resultString + this.haeIkakausi(lista[i]) + " "
       }
       return resultString
+    },
+    valitutIkakaudet: function (ikakaudet) {
+      //console.log(ikakaudet)
+      let valitut = []
+      ikakaudet.forEach(element => {
+        if (element.checked == true) {
+          valitut.push(element.id)
+        }
+      });  
+      //console.log(valitut)
+      return valitut
+
+    },
+    containsAll: function (array_a, array_b) { 
+      var int_array_b = array_b.map(x => parseInt(x, 10))
+      return array_a.every((val) => int_array_b.includes(val))
+      
+    },
+    containsOne: function (array_a, array_b) {
+      var int_array_b = array_b.map(x => parseInt(x, 10))
+      return  array_a.some((val) => int_array_b.includes(val))
     }
   }
 })
-
-
 
 
 const app = new Vue({

@@ -13,20 +13,19 @@
 
       <md-tab id="tab-pages" md-label="Oma ikäkausi">
         <h1>Oman ikäkauden tapahtumat</h1>
-        You have checked: {{ this.$store.state.valitutIkakaudet }}
         <div class="clearfix"></div>
         <div
           class="columns category-posts"
           v-if="!events.events || events.events.length === 0"
         >Ladataan tapahtumia...</div>
-        <vwp-events :events="events.events.filter(e => e.ikakausi.includes(234))"></vwp-events>
+        <vwp-events :events="events.events.filter( e => containsOne(valitutIkakaudet(ikakaudet),[e.ikakausi]))"></vwp-events>
       </md-tab>
     </md-tabs>
   </section>
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters, mapState } from "vuex";
 import VwpEvents from "components/vwpEvents.vue";
 const fetchInitialData = (store, route) => {
   route.params.page = route.params.page || 1;
@@ -40,7 +39,8 @@ export default {
     "vwp-events": VwpEvents
   },
   computed: {
-    ...mapGetters("events", ["events"])
+    ...mapGetters("events", ["events"]),
+    ...mapState("settings",["ikakaudet", "alaleirit"])
   },
   methods: {
     loadEvents() {

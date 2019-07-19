@@ -4,18 +4,19 @@ import * as mutations from './mutations'
 
 const state = {
   ikakaudet: [
-    {id: "2", label: 'Aikuiset', checked: false},
-    {id: "3", label: 'Vaeltajat', checked: true},
-    {id: "4", label: 'Samoajat', checked: false},
-    {id: "5", label: 'Tarpojat', checked: false},
-    {id: "6", label: 'Seikkailijat', checked: false}
+    {id: 237, label: 'Aikuiset', checked: false},
+    {id: 233, label: 'Vaeltajat', checked: true},
+    {id: 234, label: 'Samoajat', checked: false},
+    {id: 236, label: 'Tarpojat', checked: false},
+    {id: 238, label: 'Seikkailijat', checked: false},
+    {id: 239, label: 'Sudenpennut', checked: false}
   ],
   alaleirit: [
-    {id: "2", label: 'Nano', checked: false},
-    {id: "3", label: 'Eksa', checked: false},
-    {id: "4", label: 'Jotta', checked: false},
-    {id: "5", label: 'Tsetta', checked: false},
-    {id: "6", label: 'Tera', checked: true}
+    {id: 2, label: 'Nano', checked: false},
+    {id: 3, label: 'Eksa', checked: false},
+    {id: 4, label: 'Jotta', checked: false},
+    {id: 5, label: 'Tsetta', checked: false},
+    {id: 6, label: 'Tera', checked: true}
   ],
 }
 
