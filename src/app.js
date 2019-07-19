@@ -24,7 +24,7 @@ Vue.filter('formatDate', function (value) {
 Vue.mixin({
   data() {
     return {
-      ikakaudet: [
+      ikakaudetIDList: [
         { id: 235, nimi: "Kaikki ikäkaudet" },
         { id: 234, nimi: "Samoajat" },
         { id: 236, nimi: "Tarpojat" },
@@ -34,10 +34,10 @@ Vue.mixin({
   },
   methods: {
     haeIkakausi: function (id) {
-      for (let i = 0; i < this.ikakaudet.length; i++) {
-        console.log("lista " + i + ", id " + this.ikakaudet[i].id + ", nimi " + this.ikakaudet[i].nimi)
-        if (this.ikakaudet[i].id == id) {
-          return this.ikakaudet[i].nimi
+      for (let i = 0; i < this.ikakaudetIDList.length; i++) {
+        console.log("lista " + i + ", id " + this.ikakaudetIDList[i].id + ", nimi " + this.ikakaudetIDList[i].nimi)
+        if (this.ikakaudetIDList[i].id == id) {
+          return this.ikakaudetIDList[i].nimi
         }
       }
       return false

@@ -1,10 +1,10 @@
-const updateIkakaudet = (state, items) => {
+const IKAKAUDET_UPDATED = (state, items) => {
     state.ikakaudet = items
 }
-const updateAlaleirit = (state, items) => {
+const ALALEIRIT_UPDATED = (state, items) => {
     state.alaleirit = items
 }
 export {
-    updateIkakaudet,
-    updateAlaleirit
+    IKAKAUDET_UPDATED,
+    ALALEIRIT_UPDATED
 }

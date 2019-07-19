@@ -1,5 +1,7 @@
-const ik = state => state.valitutIkakaudet
+const ikakaudet = state => state.ikakaudet
+const alaleirit = state => state.alaleirit
 
 export {
-  valitutIkakaudet
+  ikakaudet,
+  alaleirit
 }

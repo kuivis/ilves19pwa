@@ -1,5 +1,6 @@
 <template>
   <div>
+    {{ ikakaudet }}
     <md-list>
       <md-list-item to="/page/mobiili">
         <md-icon class="md-size-3x">local_hospital</md-icon>

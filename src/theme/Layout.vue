@@ -19,39 +19,22 @@
             <span class="md-list-item-text">Valitse ikäkaudet</span>
             <md-list slot="md-expand">
               <md-list-item>
-                <md-checkbox class="md-primary" v-model="checkAllIkakaudet">Kaikki</md-checkbox>
-              </md-list-item>
-              <md-list-item
-                v-for="item in ikakaudet"
-                :key="item.id"
-                :label="item.label"
-                :checked="item.checked"
-              >
-                <md-checkbox class="md-primary"  value="item.checked">{{ item.label }}</md-checkbox>
-              </md-list-item>
-            </md-list>
-          </md-list-item>
-          <md-divider></md-divider>
-          <md-list-item md-expand>
-            <span class="md-list-item-text">Valitse alaleiri</span>
-            <md-list slot="md-expand">
-              <md-list-item>
-                <md-checkbox v-model="alaleirit">Kaikki alaleirit</md-checkbox>
+                <md-checkbox
+                  class="md-primary"
+                  v-model="ikakaudet[0].checked"
+                >{{ikakaudet[0].label}}</md-checkbox>
               </md-list-item>
               <md-list-item>
-                <md-checkbox v-model="alaleirit.eksa">Eksa</md-checkbox>
+                <md-checkbox
+                  class="md-primary"
+                  v-model="ikakaudet[1].checked"
+                >{{ikakaudet[1].label}}</md-checkbox>
               </md-list-item>
               <md-list-item>
-                <md-checkbox v-model="alaleirit.nano">Nano</md-checkbox>
-              </md-list-item>
-              <md-list-item>
-                <md-checkbox v-model="alaleirit.jotta">Jotta</md-checkbox>
-              </md-list-item>
-              <md-list-item>
-                <md-checkbox v-model="alaleirit.tera">Tera</md-checkbox>
-              </md-list-item>
-              <md-list-item>
-                <md-checkbox v-model="alaleirit.tsetta">Tsetta</md-checkbox>
+                <md-checkbox
+                  class="md-primary"
+                  v-model="ikakaudet[2].checked"
+                >{{ikakaudet[2].label}}</md-checkbox>
               </md-list-item>
             </md-list>
           </md-list-item>
@@ -63,7 +46,6 @@
             </md-list-item>
           </md-list-item>
         </md-list>
-        You have checked: {{valitutIkakaudet}}
       </md-app-drawer>
 
       <md-app-content>
@@ -99,16 +81,19 @@
 </template>
 
 <script>
+import { mapGetters, mapState, mapActions } from "vuex";
+
 export default {
   name: "app",
   data: () => ({
     menuVisible: false
   }),
   computed: {
-    ...mapState(["ikakaudet", "alaleirit"])
+
+    ...mapState("settings",["ikakaudet", "alaleirit"])
   },
   methods: {
-    ...mapActions(["updateIkakaudet", "updateAlaleirit"])
+    ...mapActions("settings",["updateIkakaudet", "updateAlaleirit"])
   }
 };
 </script>
