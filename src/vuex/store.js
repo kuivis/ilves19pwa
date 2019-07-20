@@ -4,8 +4,13 @@ import categoryModule from './modules/category/index'
 import pageModule from './modules/page/index'
 import eventsModule from './modules/events/index'
 import settingsModule from './modules/settings/index'
+import VuexPersistence from 'vuex-persist'
 
 Vue.use(Vuex)
+
+const vuexLocal = new VuexPersistence({
+  modules: ['settings']
+})
 
 export default new Vuex.Store({
   strict: true,
@@ -14,5 +19,6 @@ export default new Vuex.Store({
     page: pageModule,
     events: eventsModule,
     settings: settingsModule
-  }
+  },
+  plugins: [vuexLocal.plugin]
 })
