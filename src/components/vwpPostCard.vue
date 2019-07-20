@@ -26,7 +26,7 @@
      <md-card-content>
       <span v-html="post.excerpt.rendered">></span>
       <br>
-      <small>Ikäkausi: {{ this.ikakausiLista(post.ikakausi)}}</small>
+      <small>Ikäkausi: {{ this.haeNimiLista(post.ikakausi)}}</small>
     </md-card-content>
      <md-card-actions>
       <md-button>Jaa linkki</md-button>

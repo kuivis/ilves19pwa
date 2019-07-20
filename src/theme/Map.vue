@@ -13,7 +13,7 @@ export default {
       const google = await gmapsInit();
       var evo = {lat: 61.205, lng: 25.122};
       var map = new google.maps.Map(this.$el,{
-        zoom:16, 
+        zoom:12, 
         center: evo,
         zoomControl: false,
         mapTypeControl: false,
@@ -22,7 +22,7 @@ export default {
         fullscreenControl: false
       } );
 
-      var kmzLayer = new google.maps.KmlLayer('https://rest.ilves19.fi/media/ilves19_karttalinkki.kmz');
+      var kmzLayer = new google.maps.KmlLayer('https://rest.ilves19.fi/media/ilves19_mobiilikartta_19072019.kmz');
       kmzLayer.setMap(map);
 
 

@@ -30,10 +30,12 @@
     </md-card-header>
     <md-card-content>
       <span v-html="post.excerpt.rendered">></span>
-      <small>Ikäkausi: {{ this.ikakausiLista(post.ikakausi)}}</small>
+      <small>Ikäkausi: {{ this.haeNimiLista(post.ikakausi)}}</small>
+      <br />
+      <small>Alaleiri: {{ this.haeNimiLista(post.alaleiri) }}</small>
     </md-card-content>
     <md-card-actions>
-      <md-button>Jaa linkki</md-button>
+      <!--<md-button v-on:click="sharePost(post)">Jaa linkki</md-button>-->
       <md-button v-on:click="gotoPost(post)">Avaa</md-button>
     </md-card-actions>
   </md-card>
@@ -51,6 +53,17 @@ export default {
           path: "/tapahtumat/" + post.slug
         });
       }
+    },
+     sharePost: function(post) {
+      if (navigator.share) {
+        navigator.share({
+        title: post.title.rendered,
+        text: post.excerpt.rendered,
+        url: 'https://developers.google.com/web',
+  })
+    .then(() => console.log('Successful share'))
+    .catch((error) => console.log('Error sharing', error));
+}
     },
     cdnUrl: function(url) {
       return url.replace("https://www.ilves19.fi/", Config.wpDomain);

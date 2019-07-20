@@ -24,38 +24,43 @@ Vue.filter('formatDate', function (value) {
 Vue.mixin({
   data() {
     return {
-      ikakaudetIDList: [
+      tagNameList: [
         { id: 235, nimi: "Kaikki ikäkaudet" },
         { id: 234, nimi: "Samoajat" },
         { id: 236, nimi: "Tarpojat" },
         { id: 233, nimi: "Vaeltajat" },
         { id: 237, nimi: "Aikuiset" },
         { id: 238, nimi: "Seikkailijat" },
-        { id: 239, nimi: "Sudenpennut" }
+        { id: 240, nimi: "Nano" },
+        { id: 241, nimi: "Eksa" },
+        { id: 242, nimi: "Jotta" },
+        { id: 243, nimi: "Tsetta" },
+        { id: 244, nimi: "Tera" },
+        { id: 245, nimi: "Kaikki alaleirit" }
       ]
     }
   },
   methods: {
-    haeIkakausi: function (id) {
-      for (let i = 0; i < this.ikakaudetIDList.length; i++) {
-        console.log("lista " + i + ", id " + this.ikakaudetIDList[i].id + ", nimi " + this.ikakaudetIDList[i].nimi)
-        if (this.ikakaudetIDList[i].id == id) {
-          return this.ikakaudetIDList[i].nimi
+    haeNimi: function (id) {
+      for (let i = 0; i < this.tagNameList.length; i++) {
+        //console.log("lista " + i + ", id " + this.tagNameList[i].id + ", nimi " + this.tagNameList[i].nimi)
+        if (this.tagNameList[i].id == id) {
+          return this.tagNameList[i].nimi
         }
       }
       return false
     },
-    ikakausiLista: function (lista) {
+    haeNimiLista: function (lista) {
       let resultString = ""
       for (let i = 0; i < lista.length; i++) {
-        resultString = resultString + this.haeIkakausi(lista[i]) + " "
+        resultString = resultString + this.haeNimi(lista[i]) + " "
       }
       return resultString
     },
-    valitutIkakaudet: function (ikakaudet) {
-      //console.log(ikakaudet)
+    haeValitut: function (asetukset) {
+      //console.log(asetukset)
       let valitut = []
-      ikakaudet.forEach(element => {
+      asetukset.forEach(element => {
         if (element.checked == true) {
           valitut.push(element.id)
         }
@@ -72,6 +77,11 @@ Vue.mixin({
     containsOne: function (array_a, array_b) {
       var int_array_b = array_b.map(x => parseInt(x, 10))
       return  array_a.some((val) => int_array_b.includes(val))
+    },
+    filterEvents: function (valitutI, tapahtumaI, valitutA, tapahtumaA) {
+      //console.log("ikak: " + valitutI + ", " + tapahtumaI)
+      //console.log("alal: " + valitutA + ", " + tapahtumaA)
+      return this.containsOne(valitutI,tapahtumaI) && this.containsOne(valitutA, tapahtumaA)
     }
   }
 })

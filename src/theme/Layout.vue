@@ -24,6 +24,15 @@
             </md-list>
           </md-list-item>
           <md-divider></md-divider>
+          <md-list-item md-expand>
+            <span class="md-list-item-text">Valitse alaleirit</span>
+            <md-list slot="md-expand">
+              <md-list-item v-for="alaleiri in alaleirit" v-bind:key="alaleiri.id">
+                <md-checkbox class="md-primary" v-model="alaleiri.checked">{{ alaleiri.label }}</md-checkbox>
+              </md-list-item>
+            </md-list>
+          </md-list-item>
+           <md-divider></md-divider>
           <md-list-item>
             <md-list-item>
               <md-icon>error</md-icon>
@@ -40,10 +49,9 @@
           </div>
         </section>
 
-        <md-bottom-bar md-type="shift" md-theme="default" md-sync-router>
+        <md-bottom-bar md-type="shift" md-theme="default" md-sync-route>
           <md-bottom-bar-item
             to="/page/mobiili"
-            exact
             md-label="Etusivu"
             md-icon="/assets/baseline-local_post_office-24px.svg"
           ></md-bottom-bar-item>
@@ -60,6 +68,7 @@
           ></md-bottom-bar-item>
           <md-bottom-bar-item to="/info" md-label="Leiri" md-icon="/assets/campground-solid.svg"></md-bottom-bar-item>
         </md-bottom-bar>
+
       </md-app-content>
     </md-app>
   </div>

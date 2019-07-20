@@ -12,14 +12,13 @@ const state = {
     {id: 239, label: 'Sudenpennut', checked: false}
   ],
   alaleirit: [
-    {id: 2, label: 'Nano', checked: false},
-    {id: 3, label: 'Eksa', checked: false},
-    {id: 4, label: 'Jotta', checked: false},
-    {id: 5, label: 'Tsetta', checked: false},
-    {id: 6, label: 'Tera', checked: true}
+    {id: 240, label: 'Nano', checked: false},
+    {id: 241, label: 'Eksa', checked: false},
+    {id: 242, label: 'Jotta', checked: false},
+    {id: 243, label: 'Tsetta', checked: false},
+    {id: 244, label: 'Tera', checked: true}
   ],
 }
-
 const inBrowser = typeof window !== 'undefined'
 // if in browser, use pre-fetched state injected by SSR
 //const state = (inBrowser && window.__INITIAL_STATE__) ? window.__INITIAL_STATE__.ikakaudet : defaultState

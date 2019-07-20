@@ -18,7 +18,7 @@
           class="columns category-posts"
           v-if="!events.events || events.events.length === 0"
         >Ladataan tapahtumia...</div>
-        <vwp-events :events="events.events.filter( e => containsOne(valitutIkakaudet(ikakaudet),[e.ikakausi]))"></vwp-events>
+        <vwp-events :events="events.events.filter( e => filterEvents(haeValitut(ikakaudet),[e.ikakausi],haeValitut(alaleirit),[e.alaleiri]))"></vwp-events>
       </md-tab>
     </md-tabs>
   </section>
