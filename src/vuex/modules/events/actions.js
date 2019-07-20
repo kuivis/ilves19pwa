@@ -5,7 +5,7 @@ import wordpressService from '../../../app.service'
 
 const getEvents = ({ commit, state }, params) => {
   return new Promise((resolve, reject) => {
-    wordpressService.getEvents(params.page, 100).then((events) => {
+    wordpressService.getEvents(params.page, 99).then((events) => {
       state.events = events
       state.events.totalPages = events.totalPages
       console.log("actions, getEvents, page: " + params.page)

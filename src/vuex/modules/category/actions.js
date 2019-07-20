@@ -51,7 +51,7 @@ const getCategory = ({commit, state, dispatch}, params) => {
 
 const getCategoryPosts = ({commit, state}, params) => {
   return new Promise((resolve, reject) => {
-    wordpressService.getPosts(params.category.id, params.page, 6).then((category) => {
+    wordpressService.getPosts(params.category.id, params.page, 10).then((category) => {
       params.category.posts = category.posts
       params.category.totalPages = category.totalPages
       resolve(params.category)

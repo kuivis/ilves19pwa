@@ -22,6 +22,7 @@ const router = new VueRouter({
   scrollBehavior: () => ({ y: 0 }),
   routes: [
     { path: '/page/:id', component: ThemePagePage },
+    { path: '/mobiili/:id', component: ThemePagePage },
     { path: '/page/:toplevel/:slug', component: ThemePagePage },
     { path: '/tapahtumat/', component: ThemeEventCategory, params: { page: 1 } },
     { path: '/tapahtumat/page/:page', component: ThemeEventCategory },   
@@ -35,7 +36,7 @@ const router = new VueRouter({
     { path: '/offline-redirect', component: OfflineRedirect },
     { path: '/kartta', component: MapPage },
     { path: '/info', component: InfoPage },
-    { path: '/:id', component: ThemePageSingle },
+    { path: '/:id', component: ThemePagePage },
     { path: '/', name: 'Etusivu', redirect: '/page/mobiili' }
   ]
 })

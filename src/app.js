@@ -25,18 +25,20 @@ Vue.mixin({
   data() {
     return {
       tagNameList: [
-        { id: 235, nimi: "Kaikki ikäkaudet" },
-        { id: 234, nimi: "Samoajat" },
-        { id: 236, nimi: "Tarpojat" },
-        { id: 233, nimi: "Vaeltajat" },
-        { id: 237, nimi: "Aikuiset" },
-        { id: 238, nimi: "Seikkailijat" },
-        { id: 240, nimi: "Nano" },
-        { id: 241, nimi: "Eksa" },
-        { id: 242, nimi: "Jotta" },
-        { id: 243, nimi: "Tsetta" },
-        { id: 244, nimi: "Tera" },
-        { id: 245, nimi: "Kaikki alaleirit" }
+        { id: 244, nimi: "Kaikki ikäkaudet" },
+        { id: 235, nimi: "Samoajat" },
+        { id: 243, nimi: "Tarpojat" },
+        { id: 234, nimi: "Vaeltajat" },
+        { id: 233, nimi: "Aikuiset" },
+        { id: 237, nimi: "Sudenpennut" },
+        { id: 239, nimi: "Seikkailijat" },
+        { id: 245, nimi: "Perheleirin väki" },
+        { id: 246, nimi: "Nano" },
+        { id: 242, nimi: "Eksa" },
+        { id: 238, nimi: "Jotta" },
+        { id: 240, nimi: "Tsetta" },
+        { id: 241, nimi: "Tera" },
+        { id: 236, nimi: "Kaikki alaleirit" }
       ]
     }
   },
@@ -65,7 +67,7 @@ Vue.mixin({
           valitut.push(element.id)
         }
       });  
-      //console.log(valitut)
+      console.log("valitut: " + valitut)
       return valitut
 
     },
@@ -79,8 +81,8 @@ Vue.mixin({
       return  array_a.some((val) => int_array_b.includes(val))
     },
     filterEvents: function (valitutI, tapahtumaI, valitutA, tapahtumaA) {
-      //console.log("ikak: " + valitutI + ", " + tapahtumaI)
-      //console.log("alal: " + valitutA + ", " + tapahtumaA)
+      console.log("ikak: " + valitutI + " | " + tapahtumaI)
+      console.log("alal: " + valitutA + " | " + tapahtumaA)
       return this.containsOne(valitutI,tapahtumaI) && this.containsOne(valitutA, tapahtumaA)
     }
   }

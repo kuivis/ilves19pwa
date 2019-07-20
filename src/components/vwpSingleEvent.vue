@@ -18,16 +18,14 @@
           </span>
         </div>
         <div class="is-pulled-right single-date">
-          {{new Date(single.date).toDateString()}}
-
-        <br />
         <small>Tapahtumapaikka: {{ single.cmb2.lippukuntateema_event_metabox.lippukuntateema_event_location }}</small>
         <br />
-        <small>Alkamisaika: {{ new Date(single.cmb2.lippukuntateema_event_metabox.lippukuntateema_event_date_start*1000).toDateString() }}</small>
+        <small>Alkamisaika: {{ single.cmb2.lippukuntateema_event_metabox.lippukuntateema_event_date_start | formatDate }}</small>
         <br />
-        <small>Päättymisaika: {{ new Date(single.cmb2.lippukuntateema_event_metabox.lippukuntateema_event_date_end*1000).toDateString()}}</small>
+        <small>Päättymisaika: {{ single.cmb2.lippukuntateema_event_metabox.lippukuntateema_event_date_end | formatDate }}</small>
         <br />
-        <small>ikäkaudet: {{ single.ikakausi }}</small>
+        <small>ikäkaudet: {{ this.haeNimiLista(single.ikakausi) }}</small><br/>
+        <small>alaleirit: {{ this.haeNimiLista(single.alaleiri) }}</small>
         </div>
         <div class="is-clearfix"></div>
         <div class="card-content">

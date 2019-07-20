@@ -1,23 +1,13 @@
 <template>
   <div>
     <md-list>
-      <md-list-item to="/page/mobiili">
+      <md-list-item to="/mobiili/ea-ja-turva">
         <md-icon class="md-size-3x">local_hospital</md-icon>
         <div class="md-list-item-text">
           <span>
             <strong>EA ja Turva</strong>
           </span>
           <span>Toimintaohjeita hätätilanteen varalle</span>
-        </div>
-      </md-list-item>
-
-      <md-list-item to="/page/mobiili">
-        <md-icon class="md-size-3x">music_note</md-icon>
-        <div class="md-list-item-text">
-          <span>
-            <strong>Laulujen sanoja</strong>
-          </span>
-          <span>Ilves musioi</span>
         </div>
       </md-list-item>
 
@@ -28,6 +18,17 @@
             <strong>Leirilippukuntakansio</strong>
           </span>
           <span>Tuhti infopaketti lähes kaikesta leiriin liittyvästä</span>
+        </div>
+      </md-list-item>
+
+
+      <md-list-item to="/page/mobiili">
+        <md-icon class="md-size-3x">music_note</md-icon>
+        <div class="md-list-item-text">
+          <span>
+            <strong>Laulujen sanoja</strong>
+          </span>
+          <span>Ilves musioi</span>
         </div>
       </md-list-item>
     </md-list>
