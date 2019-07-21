@@ -22,8 +22,8 @@ var config = {
     '/assets/leiriappi_bg_harmaa.png'
   ],
   'paths': {
-    'api': 'https://rest.ilves19.fi/wp-json',
-    'remote': 'https://rest.ilves19.fi/',
+    'api': 'https://www.ilves19.fi/wp-json',
+    'remote': 'https://www.ilves19.fi/',
     'client': 'http://localhost:3000/'
   },
   'cacheNames': {

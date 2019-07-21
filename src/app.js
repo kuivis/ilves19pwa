@@ -67,7 +67,7 @@ Vue.mixin({
           valitut.push(element.id)
         }
       });  
-      console.log("valitut: " + valitut)
+      //console.log("valitut: " + valitut)
       return valitut
 
     },
@@ -81,9 +81,11 @@ Vue.mixin({
       return  array_a.some((val) => int_array_b.includes(val))
     },
     filterEvents: function (valitutI, tapahtumaI, valitutA, tapahtumaA) {
-      console.log("ikak: " + valitutI + " | " + tapahtumaI)
-      console.log("alal: " + valitutA + " | " + tapahtumaA)
-      return this.containsOne(valitutI,tapahtumaI) && this.containsOne(valitutA, tapahtumaA)
+      //console.log("ikak: " + valitutI + " | " + tapahtumaI)
+      //console.log("alal: " + valitutA + " | " + tapahtumaA)
+      let success = this.containsOne(valitutI,tapahtumaI) && this.containsOne(valitutA, tapahtumaA)
+      //console.log(success)
+      return success
     }
   }
 })
