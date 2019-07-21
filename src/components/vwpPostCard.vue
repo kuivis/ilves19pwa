@@ -29,7 +29,7 @@
       <small>Ikäkausi: {{ this.haeNimiLista(post.ikakausi)}}</small>
     </md-card-content>
      <md-card-actions>
-      <md-button>Jaa linkki</md-button>
+      <!--<md-button>Jaa linkki</md-button>-->
       <md-button v-on:click="gotoPost(post)">Avaa</md-button>
     </md-card-actions>
   </md-card>

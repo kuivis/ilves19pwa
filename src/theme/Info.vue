@@ -22,13 +22,23 @@
       </md-list-item>
 
 
-      <md-list-item to="/page/mobiili">
+      <md-list-item to="/page/lauluja-ja-muuta-materiaalia">
         <md-icon class="md-size-3x">music_note</md-icon>
         <div class="md-list-item-text">
           <span>
-            <strong>Laulujen sanoja</strong>
+            <strong>Laulujen sanoja ja muuta materiaalia</strong>
           </span>
-          <span>Ilves musioi</span>
+          <span>Laula mukana ja tarinoi</span>
+        </div>
+      </md-list-item>
+
+      <md-list-item to="/page/palaute">
+        <md-icon class="md-size-3x">feedback</md-icon>
+        <div class="md-list-item-text">
+          <span>
+            <strong>Anna palautetta</strong>
+          </span>
+          <span>Onko jossain parannettavaa? Menikö jokin hienosti? Kerro siitä meille. Pliis.</span>
         </div>
       </md-list-item>
     </md-list>
@@ -38,9 +48,7 @@
       <li>Leirin Säännöt (Sisältö puuttuu)</li>
       <li>Aukioloajat (Sisältö puuttuu) (Kaupat ja kioskit, uima ja sauna ajat)</li>
       <li>Ruokalistat (Sisältö puuttuu)</li>
-      <li>Leiri materiaalit (Sisältö puuttuu (laulujen sanat))</li>
       <li>Podcastit (Sisältö puuttuu)</li>
-      <li>Anna Palautetta</li>
     </ul>
   </div>
 </template>
