@@ -17,7 +17,8 @@ Vue.use(VueClazyLoad)
 
 Vue.filter('formatDate', function (value) {
   if (value) {
-    return moment.unix(String(value)).format('DD.MM hh:mm')
+    console.log()
+    return moment.unix(String(value)).utc().format('DD.MM HH:mm')
   }
 })
 
