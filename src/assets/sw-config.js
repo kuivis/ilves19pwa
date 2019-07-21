@@ -18,6 +18,7 @@ var config = {
     '/assets/baseline-map-24px.svg',
     '/assets/baseline-info-24px.svg',
     '/assets/baseline-local_post_office-24px.svg',
+    '/assets/baseline-home-24px.svg',
     '/assets/campground-solid.svg',
     '/assets/leiriappi_bg_harmaa.png'
   ],
