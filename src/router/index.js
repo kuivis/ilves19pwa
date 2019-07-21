@@ -28,6 +28,7 @@ const router = new VueRouter({
     { path: '/tapahtumat/page/:page', component: ThemeEventCategory },   
     { path: '/tapahtumat/:slug', component: ThemeEventSingle },
     { path: '/kategoria/uutiset/:id', component: ThemePageSingle },
+    { path: '/kategoria/mobiiliuutiset/:id', component: ThemePageSingle },
     { path: '/kategoria/blogit/:id', component: ThemePageSingle },
     { path: '/kategoria/:id/page/:page', component: ThemePageCategory },
     { path: '/kategoria/:id/:page', component: ThemePageCategory },

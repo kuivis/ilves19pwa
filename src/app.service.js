@@ -25,7 +25,7 @@ let wordpressService = {
     })
   },
   getCategory (id, slug, parentId) {
-    console.log("app.service.js: getCategory")
+    //console.log("app.service.js: getCategory")
     return new Promise((resolve, reject) => {
       let path = Config.wpDomain + `wp-json/wp/v2/categories/${id}`
       if (!id && slug) {

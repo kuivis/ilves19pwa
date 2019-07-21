@@ -55,7 +55,7 @@
             md-label="Etusivu"
             md-icon="/assets/baseline-home-24px.svg"
           ></md-bottom-bar-item>
-          <md-bottom-bar-item to="/kategoria/uutiset" md-label="Uutiset" md-icon="/assets/baseline-local_post_office-24px.svg"></md-bottom-bar-item>
+          <md-bottom-bar-item to="/kategoria/mobiiliuutiset" md-label="Uutiset" md-icon="/assets/baseline-local_post_office-24px.svg"></md-bottom-bar-item>
           <md-bottom-bar-item
             to="/tapahtumat/"
             md-label="Tapahtumat"

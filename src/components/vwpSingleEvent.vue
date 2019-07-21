@@ -2,8 +2,8 @@
   <div class="vwp-single">
     <div v-if="single && single.content">
       
-      <h1 v-html="single.title.rendered"></h1>
       <div class="single-content card">
+        <h1 v-html="single.title.rendered"></h1>
         <div
           class="is-pulled-left"
           v-if="single.tags && single.tags.length > 0"
