@@ -11,9 +11,12 @@
         <vwp-events :events="events.events.filter(e => e.ikakausi.includes(244))"></vwp-events>
       </md-tab>
 
-      <md-tab id="tab-pages" md-label="Oma ikäkausi">
-        <h1>Oman ikäkauden tapahtumat</h1>
-
+      <md-tab id="tab-pages" md-label="Omat tapahtumat">
+        <h1>Omat tapahtumat</h1>
+        <div v-if="haeValitut(ikakaudet).length === 0">
+          Et ole valinnut ikäkausia tai alaleirejä, jonka tapahtumia haluat nähdä. 
+          Voit valita ikäkaudet ja alaleirit vasemman yläkulman valikko-painikkeen takaa (<md-icon>menu</md-icon>)
+        </div>
         <div class="clearfix"></div>
         <div
           class="columns category-posts"

@@ -10,10 +10,8 @@
 
       <md-app-drawer :md-active.sync="menuVisible">
         <md-toolbar class="md-transparent" md-elevation="0">
-          <strong>Leiriapin asetukset</strong>
+           <span class="md-title">Leiriapin asetukset</span>
         </md-toolbar>
-        <md-divider></md-divider>
-
         <md-list :md-expand-single="true">
           <md-list-item md-expand>
             <span class="md-list-item-text">Valitse ikäkaudet</span>
@@ -34,8 +32,8 @@
           </md-list-item>
            <md-divider></md-divider>
           <md-list-item>
-            <md-list-item>
-              <md-icon>error</md-icon>
+            <md-list-item to="/tietoja">
+              <md-icon>info</md-icon>
               <span class="md-list-item-text">Tietoa leiriapista</span>
             </md-list-item>
           </md-list-item>
@@ -66,7 +64,7 @@
             md-label="Kartta"
             md-icon="/assets/baseline-map-24px.svg"
           ></md-bottom-bar-item>
-          <md-bottom-bar-item to="/info" md-label="Leiri" md-icon="/assets/campground-solid.svg"></md-bottom-bar-item>
+          <md-bottom-bar-item to="/info" md-label="Leiritietoa" md-icon="/assets/campground-solid.svg"></md-bottom-bar-item>
         </md-bottom-bar>
 
       </md-app-content>

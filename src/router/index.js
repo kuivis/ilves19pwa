@@ -10,6 +10,7 @@ import ThemePagePage from '../theme/Page.vue'
 import OfflineRedirect from '../theme/OfflineRedirect.vue'
 import MapPage from '../theme/Map.vue'
 import InfoPage from '../theme/Info.vue'
+import AboutPage from '../theme/About.vue'
 import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
@@ -37,6 +38,7 @@ const router = new VueRouter({
     { path: '/offline-redirect', component: OfflineRedirect },
     { path: '/kartta', component: MapPage },
     { path: '/info', component: InfoPage },
+    { path: '/tietoja', component: AboutPage },
     { path: '/:id', component: ThemePagePage },
     { path: '/', name: 'Etusivu', redirect: '/page/mobiili' }
   ]

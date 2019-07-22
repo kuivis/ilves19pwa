@@ -42,13 +42,13 @@
         </div>
       </md-list-item>
     </md-list>
-    <h3>Muuta kaavailtua sisältöä:</h3>
+    <h3>Muuta kaavailtua sisältöä (lisäillään leirin aikana, kun saadaan materiaalia):</h3>
     <ul>
-      <li>Tietoa Leiristä (Sisältö puuttuu)</li>
-      <li>Leirin Säännöt (Sisältö puuttuu)</li>
-      <li>Aukioloajat (Sisältö puuttuu) (Kaupat ja kioskit, uima ja sauna ajat)</li>
-      <li>Ruokalistat (Sisältö puuttuu)</li>
-      <li>Podcastit (Sisältö puuttuu)</li>
+      <li>Tietoa Leiristä</li>
+      <li>Leirin Säännöt</li>
+      <li>Aukioloajat (Kaupat ja kioskit, uima ja sauna ajat)</li>
+      <li>Ruokalistat </li>
+      <li>Podcastit yms. muu leirillä tuotettu media</li>
     </ul>
   </div>
 </template>

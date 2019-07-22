@@ -85,7 +85,9 @@ Vue.mixin({
       //console.log("ikak: " + valitutI + " | " + tapahtumaI)
       //console.log("alal: " + valitutA + " | " + tapahtumaA)
       let success = this.containsOne(valitutI,tapahtumaI) && this.containsOne(valitutA, tapahtumaA)
-      //console.log(success)
+      if (success) {
+        //console.log("filtteriosuma")
+      }
       return success
     }
   }
