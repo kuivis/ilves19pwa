@@ -1,6 +1,7 @@
 var config = {
   'assets': [
     '/favicon.ico',
+    '/assets/favicon.ico',
     '/robots.txt',
     '/index.html',
     '/assets/app-icon.png',

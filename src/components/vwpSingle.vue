@@ -18,7 +18,7 @@
           </span>
         </div>
         <div class="is-pulled-right single-date">
-          {{new Date(single.date).toDateString()}}
+          {{ formatDate(single.date) }}
         </div>
         <div class="is-clearfix"></div>
         <div class="card-content">

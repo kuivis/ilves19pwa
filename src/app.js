@@ -44,6 +44,10 @@ Vue.mixin({
     }
   },
   methods: {
+    formatDate: function (datevalue) {
+      moment.locale("fi");
+      return moment(String(datevalue)).format('LLL');
+    },
     haeNimi: function (id) {
       for (let i = 0; i < this.tagNameList.length; i++) {
         //console.log("lista " + i + ", id " + this.tagNameList[i].id + ", nimi " + this.tagNameList[i].nimi)

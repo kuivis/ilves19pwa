@@ -1,15 +1,15 @@
 <template>
   <div>
-  <h1>Tervetuloa Leiriappiin</h1>
+  <h1>Ilves19 leiriappi 1.0</h1>
 
-<p>Tervetuloa käyttämään leiriappia! Piirileirin tiedotus on tulevaisuusteeman mukaisesti ottanut askeleen eteenpäin; viesti johtajateltasta leiriläisille kulkee nopeammin, helpommin ja ympäristöystävällisemmin kuin koskaan aikaisemmin. Monet tehdyistä uudistuksista ovat vielä verrattain kokeellisella tasolla ja sovelluksen käytön aikana voi törmätä pienempiin virheisiin, joista nettitiimin kehittäjille voi lähettää palautetta. Sovellusta kehitetään eteenpäin vielä leirin aikanakin.</p>
+<p><strong>Tervetuloa käyttämään leiriappia!</strong> Piirileirin tiedotus on tulevaisuusteeman mukaisesti ottanut askeleen eteenpäin; viesti johtajateltasta leiriläisille kulkee nopeammin, helpommin ja ympäristöystävällisemmin kuin koskaan aikaisemmin. Monet tehdyistä uudistuksista ovat vielä verrattain kokeellisella tasolla ja sovelluksen käytön aikana voi törmätä pienempiin virheisiin, joista nettitiimin kehittäjille voi lähettää palautetta. Sovellusta kehitetään eteenpäin vielä leirin aikanakin.</p>
 <p> Sovelluksen kehittämisesta, ylläpidosta ja sisällön lisäämisestä vastaa Ilveksen nettitiimi:
   <ul>
     <li>Ilari Nyman, nettikymppi</li>
     <li>Jesse Heiskanen, nettimestari</li>
     <li>Sami Kuivasaari, nettipäällikkö</li>
   </ul>
-  Kaikki kyssärit ja palaute appiin liittyen otetaan mielellään vastaan. Laita postia, tule käymään toimistoteltalla, tai vedä muuten vaan hihasta!</p>
+  Kaikki kyssärit ja palaute appiin liittyen otetaan mielellään vastaan. Laita spostia (nettitiimi@ilves19.fi), tule käymään toimistoteltalla, tai vedä muuten vaan hihasta!</p>
 
   <p>Mutta mikä tärkeintä: <strong>Hauskaa leiriä kaikille</strong></p>
 

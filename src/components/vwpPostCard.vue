@@ -20,7 +20,7 @@
       <div class="md-title">
         <span v-on:click="gotoPost(post)" v-html="post.title.rendered"></span>
       </div>
-      <div class="md-subhead">{{ post.date }}</div>
+      <div class="md-subhead">{{ formatDate(post.date) }}</div>
     </md-card-header>
    
      <md-card-content>
