@@ -14,15 +14,16 @@
       <md-tab id="tab-pages" md-label="Omat tapahtumat">
         <h1>Omat tapahtumat</h1>
         <div v-if="haeValitut(ikakaudet).length === 0">
-          Et ole valinnut ikäkausia tai alaleirejä, jonka tapahtumia haluat nähdä. 
-          Voit valita ikäkaudet ja alaleirit vasemman yläkulman valikko-painikkeen takaa (<md-icon>menu</md-icon>)
+          Et ole valinnut ikäkausia tai alaleirejä, jonka tapahtumia haluat nähdä.
+          Voit valita ikäkaudet ja alaleirit vasemman yläkulman valikko-painikkeen takaa (
+          <md-icon>menu</md-icon>)
         </div>
         <div class="clearfix"></div>
         <div
           class="columns category-posts"
           v-if="!events.events || events.events.length === 0"
         >Ladataan tapahtumia...</div>
-        <vwp-events :events="events.events.filter( e => filterEvents(haeValitut(ikakaudet),[e.ikakausi],haeValitut(alaleirit),[e.alaleiri]))"></vwp-events>
+        <vwp-events :events="events.events.filter( e => filterEvents(e))"></vwp-events>
       </md-tab>
     </md-tabs>
   </section>
@@ -44,11 +45,36 @@ export default {
   },
   computed: {
     ...mapGetters("events", ["events"]),
-    ...mapState("settings",["ikakaudet", "alaleirit"])
+    ...mapState("settings", ["ikakaudet", "alaleirit"])
   },
   methods: {
     loadEvents() {
       fetchInitialData(this.$store, this.$route);
+    },
+    haeValitut: function(asetukset) {
+      //console.log(asetukset)
+      let valitut = [];
+      asetukset.forEach(element => {
+        if (element.checked == true) {
+          valitut.push(element.id);
+        }
+      });
+      //console.log("valitut: " + valitut);
+      return valitut;
+    },
+    filterEvents: function(e) {
+      let ikakausiMatch = this.containsOne(this.haeValitut(this.ikakaudet), e.ikakausi);
+      // if (ikakausiMatch) {
+      //   console.log("ikakausiMatch");
+      // }
+      let alaleiriMatch = this.containsOne(this.haeValitut(this.alaleirit), e.alaleiri);
+      // if (alaleiriMatch) {
+      //   console.log("alaleiriMatch");
+      // }
+      let kaikilleAlaleireille = e.alaleiri.includes(236);
+      let finalMatch = ikakausiMatch && (alaleiriMatch || kaikilleAlaleireille);
+
+      return finalMatch;
     }
   },
   watch: {

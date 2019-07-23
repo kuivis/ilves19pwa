@@ -82,17 +82,15 @@ Vue.mixin({
       
     },
     containsOne: function (array_a, array_b) {
-      var int_array_b = array_b.map(x => parseInt(x, 10))
-      return  array_a.some((val) => int_array_b.includes(val))
-    },
-    filterEvents: function (valitutI, tapahtumaI, valitutA, tapahtumaA) {
-      //console.log(valitutI.length + " " + valitutA.length)
-      //console.log("ikak: " + valitutI + " | " + tapahtumaI)
-      //console.log("alal: " + valitutA + " | " + tapahtumaA)
-      let success = this.containsOne(valitutI,tapahtumaI) && (tapahtumaA.includes(236) || this.containsOne(valitutA, tapahtumaA))
-      if (success) {
-        //console.log("filtteriosuma")
-      }
+      let int_array_a = array_a.map(x => parseInt(x, 10)).sort((a,b) => a-b)
+      let int_array_b = array_b.map(x => parseInt(x, 10)).sort((a,b) => a-b)
+      
+      let success = int_array_a.some((val) => int_array_b.includes(val))
+      // if (success) {
+      //   console.log("contains a: " + int_array_a)
+      //   console.log("contains b: " + int_array_b)
+      // }
+      //console.log("success: " + success)
       return success
     }
   }

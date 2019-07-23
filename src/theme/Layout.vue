@@ -66,7 +66,6 @@
           ></md-bottom-bar-item>
           <md-bottom-bar-item to="/info" md-label="Leiritietoa" md-icon="/assets/campground-solid.svg"></md-bottom-bar-item>
         </md-bottom-bar>
-        <ga-analytics ua="UA-116951091-2"></ga-analytics>
       </md-app-content>
     </md-app>
   </div>
@@ -74,7 +73,6 @@
 
 <script>
 import { mapGetters, mapState, mapActions } from "vuex"
-import gaAnalytics from 'components/gaAnalytics.vue'
 
 export default {
   name: "app",
