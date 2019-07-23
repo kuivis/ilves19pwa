@@ -57,7 +57,7 @@ let wordpressService = {
   getEvents (page, perPage, order = 'desc') {
     console.log("app.service.js: getEvents")
     return new Promise((resolve, reject) => {
-      let path = Config.wpDomain + `wp-json/wp/v2/event?page=${page}&order=${order}&per_page=${perPage}&fields=id,title,slug,date,better_featured_image,excerpt,cmb2`
+      let path = Config.wpDomain + `wp-json/wp/v2/event?page=${page}&filter[orderby]=cmb2.lippukuntateema_event_metabox.lippukuntateema_event_date_start&order=asc&per_page=${perPage}&fields=id,title,slug,date,better_featured_image,excerpt,cmb2`
       //console.log(path)
       this.cacheRequest(path, 0)
         .then(response => {

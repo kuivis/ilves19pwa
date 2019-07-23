@@ -86,9 +86,10 @@ Vue.mixin({
       return  array_a.some((val) => int_array_b.includes(val))
     },
     filterEvents: function (valitutI, tapahtumaI, valitutA, tapahtumaA) {
+      //console.log(valitutI.length + " " + valitutA.length)
       //console.log("ikak: " + valitutI + " | " + tapahtumaI)
       //console.log("alal: " + valitutA + " | " + tapahtumaA)
-      let success = this.containsOne(valitutI,tapahtumaI) && this.containsOne(valitutA, tapahtumaA)
+      let success = this.containsOne(valitutI,tapahtumaI) && (tapahtumaA.includes(236) || this.containsOne(valitutA, tapahtumaA))
       if (success) {
         //console.log("filtteriosuma")
       }
