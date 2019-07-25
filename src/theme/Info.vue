@@ -32,6 +32,17 @@
         </div>
       </md-list-item>
 
+      <md-list-item to="/page/aukioloajat">
+        <md-icon class="md-size-3x">access_time</md-icon>
+        <div class="md-list-item-text">
+          <span>
+            <strong>Aukioloaikoja ja ohjelmaa</strong>
+          </span>
+          <span>Koskas se nyt olikaan auki ja mitä siellä tapahtui</span>
+        </div>
+      </md-list-item>
+
+
       <md-list-item to="/page/palaute">
         <md-icon class="md-size-3x">feedback</md-icon>
         <div class="md-list-item-text">
