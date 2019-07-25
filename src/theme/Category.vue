@@ -1,10 +1,20 @@
 <template>
   <section>
-    <div class="clearfix"></div>
+        <md-tabs>
+          <md-tab id="tab-home" md-label="Ilves uutiset" exact>
+            <div class="clearfix"></div>
     <div class="columns category-posts" v-if="!categories || categories.length === 0">
       Ladataan juttuja...
     </div>
     <vwp-subcategory :categories="categories" ></vwp-subcategory>
+      </md-tab>
+
+      <md-tab id="tab-pages" md-label="Ilves somefeedi">
+          <script src="https://assets.juicer.io/embed.js" type="text/javascript"></script>
+          <link href="https://assets.juicer.io/embed.css" media="all" rel="stylesheet" type="text/css" />
+          <ul class="juicer-feed" data-feed-id="ilves19" data-columns="1"></ul>
+      </md-tab>
+    </md-tabs>
   </section>
 </template>
 
@@ -61,4 +71,48 @@ export default {
   .category-posts{
     flex-wrap:wrap;
   }
+
+.md-tab .juicer-feed {
+    background-color: white !important;
+}
+
+ .md-tab .juicer-feed.modern li.feed-item, .juicer-feed.polaroid li.feed-item {
+    padding: 10px;
+    background: #006d5d;
+    color: #ffffff;
+}
+
+.md-tab  .j-poster h3,
+.md-tab  .j-poster .j-date  {
+  color: white;
+}
+
+.j-overlay .j-overlay-text .j-poster h3,
+.j-overlay  .j-overlay-text .j-poster .j-date  {
+  color: #3A3A3A!important;
+}
+
+
+
+.md-tab .juicer-feed.modern .j-message {
+    color: white;
+}
+
+.md-tab .juicer-feed a,
+.md-tab .juicer-feed .j-meta a
+ {
+    color:white!important;
+}
+
+
+.j-overlay  .juicer-feed a,
+.j-overlay  .juicer-feed .j-meta a
+ {
+    color:#3A3A3A!important;
+}
+
+.j-post-overlay.juicer-feed a.juicer-button {
+      border: 2px solid #3A3A3A !important;
+
+}
 </style>
