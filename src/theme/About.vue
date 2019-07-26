@@ -20,7 +20,7 @@ Suosittelemme sovelluksen asentamistä älypuhelimesi kotinäyttöön. Suht. tuo
 Iphone-laitteilla sovellus pitää itse lisätä kotinäyttöön, sen voi tehdä seuraavasti
 <ol>
     <li>Avaa https://app.ilves19.fi sivu Safari selaimella (todennäköisesti olet jo tehnyt tämän)</li>
-    <li>Napaita Jaa (Share) painiketta (se näyttää laatikolta, josta nousee nuoli ylöspäin)</li>
+    <li>Napauta Jaa (Share) painiketta (se näyttää laatikolta, josta nousee nuoli ylöspäin)</li>
     <li>Napauta ikonia, jossa lukee "Lisää koti-näyttöön (Add to Home Screen)"</li>
     <li>Napauta "Lisää (Add)" painiketta</li>
 </ol>
@@ -100,6 +100,12 @@ Voit käyttää alla olevia skenaarioita harjoitteleminen 💪
 </ul>
 
     <h2>Leiriapplikaation versiohistoria</h2>
+    <strong>Versio 1.1 26.7.2019</strong>
+    <ul>
+      <li>Useita pieniä korjauksia</li>
+      <li>Karttaa, etusivua, ruokalistoja </li>
+      <li>Paljon paljon uusia tapahtumia</li>
+    </ul>
     <strong>Versio 1.0 23.7.2019</strong>
     <ul>
       <li>Ensimmäinen versio julkaistu</li>

@@ -42,6 +42,27 @@
         </div>
       </md-list-item>
 
+            <md-list-item to="/page/ruokalistat">
+        <md-icon class="md-size-3x">fastfood</md-icon>
+        <div class="md-list-item-text">
+          <span>
+            <strong>Leirin ruokalistat</strong>
+          </span>
+          <span>Mitäs tänään syötäisiin?</span>
+        </div>
+      </md-list-item>
+
+
+            <md-list-item to="/page/uimavuorot">
+        <md-icon class="md-size-3x">pool</md-icon>
+        <div class="md-list-item-text">
+          <span>
+            <strong>Alaleirien uimavuorot</strong>
+          </span>
+          <span>Järveen: N, Y, T, NYT!</span>
+        </div>
+      </md-list-item>
+
 
       <md-list-item to="/page/palaute">
         <md-icon class="md-size-3x">feedback</md-icon>
@@ -53,14 +74,6 @@
         </div>
       </md-list-item>
     </md-list>
-    <h3>Muuta kaavailtua sisältöä (lisäillään leirin aikana, kun saadaan materiaalia):</h3>
-    <ul>
-      <li>Tietoa Leiristä</li>
-      <li>Leirin Säännöt</li>
-      <li>Aukioloajat (Kaupat ja kioskit, uima ja sauna ajat)</li>
-      <li>Ruokalistat </li>
-      <li>Podcastit yms. muu leirillä tuotettu media</li>
-    </ul>
   </div>
 </template>
 
