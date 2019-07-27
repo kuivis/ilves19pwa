@@ -13,7 +13,7 @@ export default {
       const google = await gmapsInit();
       var evo = {lat: 61.205, lng: 25.122};
       var map = new google.maps.Map(this.$el,{
-        zoom:12, 
+        zoom:13, 
         center: evo,
         zoomControl: false,
         mapTypeControl: false,
