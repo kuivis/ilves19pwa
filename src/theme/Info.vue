@@ -63,6 +63,17 @@
         </div>
       </md-list-item>
 
+                  <md-list-item to="/media">
+        <md-icon class="md-size-3x">video_library</md-icon>
+        <div class="md-list-item-text">
+          <span>
+            <strong>Videomatskuu</strong>
+          </span>
+          <span>Leirin ohjelmalaaksoissa tuotettua <br/>videomateriaalia</span>
+        </div>
+      </md-list-item>
+
+
 
       <md-list-item to="/page/palaute">
         <md-icon class="md-size-3x">feedback</md-icon>

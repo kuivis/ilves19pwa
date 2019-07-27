@@ -22,7 +22,7 @@ export default {
         fullscreenControl: false
       } );
 
-      var kmzLayer = new google.maps.KmlLayer('https://www.ilves19.fi/wp-content/uploads/ilves-kartta.kmz');
+      var kmzLayer = new google.maps.KmlLayer('https://www.ilves19.fi/wp-content/uploads/ilves-kartta2.kmz');
       kmzLayer.setMap(map);
 
 
