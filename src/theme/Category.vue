@@ -48,11 +48,6 @@ export default {
       fetchInitialData(this.$store, this.$route);
     }
   },
-  mounted() {
-    let juicerScript = document.createElement("script");
-    juicerScript.setAttribute("src", "https://assets.juicer.io/embed.js");
-    document.head.appendChild(juicerScript);
-  },
   watch: {
     $route(to, from) {
       console.log("route change watched");
@@ -62,6 +57,9 @@ export default {
   prefetch: fetchInitialData,
   mounted() {
     this.loadPosts();
+    let juicerScript = document.createElement("script");
+    juicerScript.setAttribute("src", "https://assets.juicer.io/embed.js");
+    document.head.appendChild(juicerScript);
   }
 };
 </script>
@@ -115,4 +113,12 @@ export default {
   border: 2px solid #3a3a3a !important;
   color:  #3a3a3a !important;
 }
+.md-tab .juicer-feed a.juicer-button {
+    color: #003F2F !important;
+}
+
+.md-tab .juicer-feed .j-paginate {
+  border: 2px solid #003F2F !important;
+}
+
 </style>
