@@ -67,9 +67,9 @@
         <md-icon class="md-size-3x">video_library</md-icon>
         <div class="md-list-item-text">
           <span>
-            <strong>Videomatskuu</strong>
+            <strong>Mediamatskuu</strong>
           </span>
-          <span>Leirin ohjelmalaaksoissa tuotettua <br/>videomateriaalia</span>
+          <span>Kuvia ja videoita leiriltä</span>
         </div>
       </md-list-item>
 

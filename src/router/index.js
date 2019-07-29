@@ -9,6 +9,7 @@ import ThemeEventSingle from '../theme/Single-events.vue'
 import ThemePagePage from '../theme/Page.vue'
 import OfflineRedirect from '../theme/OfflineRedirect.vue'
 import MapPage from '../theme/Map.vue'
+import MapCarnivalPage from '../theme/MapCarnival.vue'
 import InfoPage from '../theme/Info.vue'
 import AboutPage from '../theme/About.vue'
 import DebugPage from '../theme/Debug.vue'
@@ -38,6 +39,7 @@ const router = new VueRouter({
     { path: '/kategoria/:categorySlug/:id', component: ThemePageSingle },
     { path: '/kategoria/:id', component: ThemePageCategory, params: { page: 1 } },
     { path: '/offline-redirect', component: OfflineRedirect },
+    { path: '/kartta2', component: MapCarnivalPage },
     { path: '/kartta', component: MapPage },
     { path: '/info', component: InfoPage },
     { path: '/tietoja', component: AboutPage },

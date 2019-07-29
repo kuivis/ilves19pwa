@@ -1,5 +1,8 @@
 <template>
   <div>
+    <h1>Ilveksen virallinen kuvapankki</h1>
+      <p>Parhaat otokset leiriltä lajiteltuna nätisti päivittäin/tapahtumittain:<br/>
+      <a href="https://ilves19.kuvat.fi/kuvat/"><strong>ILVES KUVAPANKKI</strong></a></p>
 
      <h1>Horisontti</h1>
 
