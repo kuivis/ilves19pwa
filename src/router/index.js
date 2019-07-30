@@ -14,6 +14,7 @@ import InfoPage from '../theme/Info.vue'
 import AboutPage from '../theme/About.vue'
 import DebugPage from '../theme/Debug.vue'
 import MediaPage from '../theme/Media.vue'
+import HiddenGame from '../theme/Game.vue'
 import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
@@ -45,6 +46,7 @@ const router = new VueRouter({
     { path: '/tietoja', component: AboutPage },
     { path: '/debug', component: DebugPage },
     { path: '/media', component: MediaPage },
+    { path: '/game', component: HiddenGame },
     { path: '/:id', component: ThemePagePage },
     { path: '/', name: 'Etusivu', redirect: '/page/mobiili' }
   ]

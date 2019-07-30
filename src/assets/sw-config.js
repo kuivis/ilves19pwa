@@ -21,7 +21,12 @@ var config = {
     '/assets/baseline-local_post_office-24px.svg',
     '/assets/baseline-home-24px.svg',
     '/assets/campground-solid.svg',
-    '/assets/leiriappi_bg_harmaa.png'
+    '/assets/leiriappi_bg_harmaa.png',
+    '/assets/bird.png',
+    '/assets/bg.png',
+    '/assets/fg.png',
+    '/assets/pipeNorth.png',
+    '/assets/pipeSouth.png',
   ],
   'paths': {
     'api': 'https://www.ilves19.fi/wp-json',

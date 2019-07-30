@@ -10,5 +10,10 @@
   "../src/assets/baseline-info-24px.svg":"../dist/assets/baseline-info-24px.svg",
   "../src/assets/baseline-local_post_office-24px.svg":"../dist/assets/baseline-local_post_office-24px.svg",
   "../src/assets/campground-solid.svg":"../dist/assets/campground-solid.svg",
-  "../src/assets/leiriappi_bg_harmaa.png":"../dist/assets/leiriappi_bg_harmaa.png"
+  "../src/assets/leiriappi_bg_harmaa.png":"../dist/assets/leiriappi_bg_harmaa.png",
+  "../src/assets/bird.png":"../dist/bird.png",
+  "../src/assets/bg.png":"../dist/assets/bg.png",
+  "../src/assets/fg.png":"../dist/assets/fg.png",
+  "../src/assets/pipeNorth.png":"../dist/assets/pipeNorth.png",
+  "../src/assets/pipeSouth.png":"../dist/assets/pipeSouth.png"
 }
