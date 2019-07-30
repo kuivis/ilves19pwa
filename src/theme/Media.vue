@@ -4,6 +4,10 @@
       <p>Parhaat otokset leiriltä lajiteltuna nätisti päivittäin/tapahtumittain:<br/>
       <a href="https://ilves19.kuvat.fi/kuvat/"><strong>ILVES KUVAPANKKI</strong></a></p>
 
+      <h1>Leiripodcastit</h1>
+      <p>Kuuntele Ilves19 virallisia podcasteja:<br/>
+      <a href="https://www.ilves19.fi/wp-content/uploads/biipiilaakso.mp3"><strong>Jakso 1: BiiPii-laakso</strong></a></p>
+
      <h1>Horisontti</h1>
 
 <p>Ohessa Viesti tulevaisuudesta videot soittolistana, voit valita videon klikkaamalla oikean yläkulman soittolistaikonia (<md-icon>playlist_play</md-icon>)
