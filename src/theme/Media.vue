@@ -6,7 +6,8 @@
 
       <h1>Leiripodcastit</h1>
       <p>Kuuntele Ilves19 virallisia podcasteja:<br/>
-      <a href="https://www.ilves19.fi/wp-content/uploads/biipiilaakso.mp3"><strong>Jakso 1: BiiPii-laakso</strong></a></p>
+      <a href="https://www.ilves19.fi/wp-content/uploads/biipiilaakso.mp3"><strong>Jakso 1: BiiPii-laakso</strong></a><br/>
+      <a href="https://www.ilves19.fi/wp-content/uploads/horisonttilaakso2.mp3"><strong>Jakso 2: Horisontti-laakso</strong></a></p>
 
      <h1>Horisontti</h1>
 
